@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiénes Somos | Clínica Dental Guadalix</title>
+  <meta name="description" content="Conoce al equipo de profesionales de Clínica Dental Guadalix: directoras médicas, ortodoncista, odontopediatra, endodoncista, higienista y personal auxiliar.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://clinicadentalguadalix.com/quienes-somos">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Quiénes Somos | Clínica Dental Guadalix">
+  <meta property="og:description" content="Un equipo de especialistas con décadas de experiencia y formación de alto nivel al servicio de tu salud bucodental.">
+  <meta property="og:url" content="https://clinicadentalguadalix.com/quienes-somos">
+  <meta property="og:site_name" content="Clínica Dental Guadalix">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ── PÁGINA QUIÉNES SOMOS — estilos propios ── */
+
+    /* Hero interno */
+    .inner-hero {
+      background: linear-gradient(135deg, var(--primary) 0%, #0d3a8c 60%, #1a2e6e 100%);
+      padding: 140px 0 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .inner-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400"><circle cx="700" cy="50" r="250" fill="%232176FF" opacity=".06"/><circle cx="50" cy="350" r="180" fill="%232176FF" opacity=".04"/></svg>');
+      background-size: cover;
+    }
+    .inner-hero h1 {
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 800; color: var(--white);
+      line-height: 1.1; margin-bottom: 16px;
+      position: relative; z-index: 1;
+    }
+    .inner-hero h1 span { color: #7EB3FF; }
+    .inner-hero p {
+      font-size: 18px; color: rgba(255,255,255,0.75);
+      max-width: 640px; margin: 0 auto 32px;
+      line-height: 1.65; position: relative; z-index: 1;
+    }
+    .breadcrumb {
+      display: flex; align-items: center; justify-content: center;
+      gap: 8px; font-size: 14px;
+      color: rgba(255,255,255,0.55);
+      position: relative; z-index: 1; margin-bottom: 24px;
+    }
+    .breadcrumb a { color: rgba(255,255,255,0.7); text-decoration: none; }
+    .breadcrumb a:hover { color: white; }
+    .breadcrumb span { color: rgba(255,255,255,0.35); }
+
+    /* Intro section */
+    .intro-section {
+      padding: 80px 0;
+      background: var(--white);
+    }
+    .intro-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+    }
+    .intro-text h2 {
+      font-size: clamp(26px, 3.5vw, 38px); font-weight: 800;
+      color: var(--text-dark); margin-bottom: 20px; line-height: 1.2;
+    }
+    .intro-text p { font-size: 16px; line-height: 1.75; margin-bottom: 16px; }
+    .intro-img {
+      border-radius: 20px; box-shadow: var(--shadow-hover);
+      width: 100%; object-fit: cover; height: 420px;
+    }
+    .intro-pills {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px;
+    }
+    .pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--surface); border-radius: 50px;
+      padding: 8px 16px; font-size: 13px; font-weight: 600;
+      color: var(--primary); border: 1px solid rgba(10,36,99,0.1);
+    }
+    .pill svg { width: 14px; height: 14px; color: var(--success); }
+
+    /* Team section */
+    .team-section { padding: 80px 0; }
+    .team-section.alt { background: var(--surface); }
+
+    .team-section-header { margin-bottom: 48px; }
+    .team-section-header .label-tag { margin-bottom: 8px; }
+    .team-section-header h2 {
+      font-size: clamp(24px, 3vw, 34px); font-weight: 800;
+      color: var(--text-dark); margin-bottom: 12px;
+    }
+    .team-section-header p { font-size: 16px; color: var(--text-body); max-width: 560px; }
+
+    /* Doctor card — horizontal layout for senior doctors */
+    .doctor-card {
+      background: var(--white); border-radius: var(--radius-card);
+      box-shadow: var(--shadow-card); border: 1px solid rgba(10,36,99,0.06);
+      overflow: hidden; display: grid;
+      grid-template-columns: 280px 1fr;
+      transition: var(--transition);
+    }
+    .doctor-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-3px); }
+    .doctor-card + .doctor-card { margin-top: 28px; }
+
+    .doctor-photo-wrap {
+      position: relative; overflow: hidden;
+      background: linear-gradient(135deg, var(--surface), #e0e8f7);
+    }
+    .doctor-photo {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: top center;
+      display: block;
+    }
+    .doctor-photo-placeholder {
+      width: 100%; height: 100%; min-height: 280px;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, #E8EEF8, #C8D8F0);
+    }
+    .doctor-photo-placeholder svg { width: 80px; height: 80px; color: #A0B4D0; }
+
+    .doctor-info { padding: 36px 40px; display: flex; flex-direction: column; justify-content: center; }
+    .doctor-role {
+      display: inline-block; font-size: 12px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--accent); margin-bottom: 8px;
+    }
+    .doctor-name {
+      font-size: clamp(20px, 2.5vw, 26px); font-weight: 800;
+      color: var(--text-dark); margin-bottom: 4px; line-height: 1.2;
+    }
+    .doctor-colegiado {
+      font-size: 13px; color: var(--text-muted); margin-bottom: 20px;
+      font-weight: 500;
+    }
+    .doctor-bio {
+      list-style: none; display: flex; flex-direction: column; gap: 8px;
+    }
+    .doctor-bio li {
+      display: flex; gap: 10px; align-items: flex-start;
+      font-size: 14px; color: var(--text-body); line-height: 1.5;
+    }
+    .doctor-bio li::before {
+      content: '';
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent); flex-shrink: 0; margin-top: 6px;
+    }
+
+    /* Grid for support staff */
+    .staff-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+    }
+    .staff-card {
+      background: var(--white); border-radius: var(--radius-card);
+      box-shadow: var(--shadow-card); border: 1px solid rgba(10,36,99,0.06);
+      padding: 36px 28px; text-align: center;
+      transition: var(--transition);
+    }
+    .staff-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-4px); }
+
+    /* Circular photo */
+    .staff-avatar {
+      width: 120px; height: 120px; border-radius: 50%;
+      object-fit: cover; object-position: top center;
+      margin: 0 auto 20px;
+      border: 4px solid var(--surface);
+      box-shadow: 0 4px 16px rgba(10,36,99,0.12);
+      display: block;
+    }
+    .staff-avatar-placeholder {
+      width: 120px; height: 120px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-mid), var(--accent));
+      margin: 0 auto 20px; display: flex;
+      align-items: center; justify-content: center;
+      color: white; font-size: 32px; font-weight: 700;
+      border: 4px solid var(--surface);
+      box-shadow: 0 4px 16px rgba(10,36,99,0.12);
+    }
+    .staff-role-badge {
+      display: inline-block; font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--accent); margin-bottom: 6px;
+    }
+    .staff-name {
+      font-size: 17px; font-weight: 700; color: var(--text-dark);
+      margin-bottom: 16px; line-height: 1.3;
+    }
+    .staff-bio {
+      list-style: none; text-align: left;
+      display: flex; flex-direction: column; gap: 7px;
+    }
+    .staff-bio li {
+      display: flex; gap: 8px; align-items: flex-start;
+      font-size: 13px; color: var(--text-body); line-height: 1.5;
+    }
+    .staff-bio li::before {
+      content: '';
+      width: 5px; height: 5px; border-radius: 50%;
+      background: var(--accent); flex-shrink: 0; margin-top: 6px;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .gallery-item {
+      position: relative; overflow: hidden;
+      border-radius: 14px; aspect-ratio: 4/3;
+      box-shadow: var(--shadow-card);
+    }
+    .gallery-item img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+      transition: transform 0.45s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
+    .gallery-caption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(10,36,99,0.75), transparent);
+      color: white; font-size: 13px; font-weight: 500;
+      padding: 28px 16px 12px;
+      opacity: 0; transition: opacity 0.3s ease;
+    }
+    .gallery-item:hover .gallery-caption { opacity: 1; }
+
+    @media (max-width: 768px) {
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+    }
+
+    /* CTA section */
+    .team-cta {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-mid) 100%);
+      padding: 72px 0; text-align: center;
+    }
+    .team-cta h2 {
+      font-size: clamp(26px, 3.5vw, 38px); font-weight: 800;
+      color: var(--white); margin-bottom: 14px;
+    }
+    .team-cta p { font-size: 18px; color: rgba(255,255,255,0.75); margin-bottom: 32px; }
+    .btn-white-lg {
+      display: inline-block; background: var(--white); color: var(--primary);
+      font-weight: 700; padding: 16px 40px; font-size: 16px;
+      border-radius: var(--radius-btn);
+      transition: var(--transition);
+    }
+    .btn-white-lg:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.2); }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .doctor-card { grid-template-columns: 220px 1fr; }
+      .staff-grid { grid-template-columns: repeat(2, 1fr); }
+      .intro-inner { grid-template-columns: 1fr; }
+      .intro-img { height: 300px; }
+    }
+    @media (max-width: 640px) {
+      .doctor-card { grid-template-columns: 1fr; }
+      .doctor-photo-wrap { height: 260px; }
+      .staff-grid { grid-template-columns: 1fr; }
+      .doctor-info { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVBAR (igual que index) ── -->
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Inicio Clínica Dental Guadalix">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+          <path d="M16 3C16 3 10 7 8 13C6 19 10 23 13 23C14.5 23 15.5 22 16 21C16.5 22 17.5 23 19 23C22 23 26 19 24 13C22 7 16 3 16 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="rgba(33,118,255,0.15)"/>
+          <path d="M16 21V29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        Clínica Dental <span>Guadalix</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="quienes-somos.html" class="nav-link" style="color:white;">Quiénes Somos</a></li>
+        <li><a href="index.html#horarios" class="nav-link">Horarios</a></li>
+        <li><a href="index.html#testimonios" class="nav-link">Testimonios</a></li>
+        <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+      <a href="index.html#contacto" class="btn btn-primary nav-cta">Reservar Cita</a>
+      <div class="hamburger" id="hamburger" role="button" aria-label="Abrir menú" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ── MOBILE MENU ── -->
+<div class="mobile-menu" id="mobile-menu">
+  <button class="close-menu" id="close-menu">✕</button>
+  <a href="index.html#servicios" class="nav-link" onclick="closeMobileMenu()">Servicios</a>
+  <a href="quienes-somos.html" class="nav-link" onclick="closeMobileMenu()">Quiénes Somos</a>
+  <a href="index.html#horarios" class="nav-link" onclick="closeMobileMenu()">Horarios</a>
+  <a href="index.html#testimonios" class="nav-link" onclick="closeMobileMenu()">Testimonios</a>
+  <a href="index.html#contacto" class="nav-link" onclick="closeMobileMenu()">Contacto</a>
+  <a href="index.html#contacto" class="btn btn-primary" onclick="closeMobileMenu()">Reservar Cita</a>
+</div>
+
+<!-- ── HERO INTERIOR ── -->
+<section class="inner-hero" aria-label="Quiénes somos">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Inicio</a>
+      <span>›</span>
+      <span style="color:rgba(255,255,255,0.9)">Quiénes Somos</span>
+    </nav>
+    <h1>Exigencia y <span>compromiso</span></h1>
+    <p>Fruto de años de experiencia y formación de alto nivel, un equipo especializado y multidisciplinar al servicio de tu salud bucodental.</p>
+  </div>
+</section>
+
+<!-- ── INTRO ── -->
+<section class="intro-section" aria-labelledby="intro-title">
+  <div class="container">
+    <div class="intro-inner">
+      <div class="intro-text fade-in">
+        <span class="label-tag">Nuestra historia</span>
+        <h2 id="intro-title">Una clínica creada con un propósito claro</h2>
+        <p>Guadalix Clínica Dental nace con la vocación de ofrecer a los pacientes una atención odontológica especializada y multidisciplinar en el entorno de la Sierra Norte de Madrid.</p>
+        <p>Contamos con un local completamente reformado, accesible para personas con movilidad reducida, dotado de toda la maquinaria e instrumental necesario para el diagnóstico, tratamiento, desinfección y esterilización con los más altos estándares de calidad.</p>
+        <p>Moderno e innovador, está pensado para que los pacientes se sientan cómodos y relajados en un entorno que les inspire confianza desde el primer momento.</p>
+        <div class="intro-pills">
+          <span class="pill"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 7 6 11 12 3"/></svg> Accesible para personas con movilidad reducida</span>
+          <span class="pill"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 7 6 11 12 3"/></svg> Equipamiento de última generación</span>
+          <span class="pill"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 7 6 11 12 3"/></svg> Protocolos estrictos de esterilización</span>
+          <span class="pill"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 7 6 11 12 3"/></svg> Equipo multidisciplinar especializado</span>
+        </div>
+      </div>
+      <div class="fade-in">
+        <img
+          src="img/clinica_recepcion1.jpg"
+          alt="Interior moderno de Clínica Dental Guadalix"
+          class="intro-img"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DIRECTORAS MÉDICAS ── -->
+<section class="team-section alt" id="directoras" aria-labelledby="directoras-title">
+  <div class="container">
+    <div class="team-section-header fade-in">
+      <span class="label-tag">Dirección Médica</span>
+      <h2 id="directoras-title">Directoras Médicas</h2>
+      <p>Doctoras por la Universidad Complutense de Madrid con amplia trayectoria investigadora y docente en Medicina y Cirugía Bucofacial.</p>
+    </div>
+
+    <!-- Dra. Silvia Llamas -->
+    <div class="doctor-card fade-in">
+      <div class="doctor-photo-wrap">
+        <img src="img/equipo_silvia.jpg" alt="Dra. Silvia Llamas Martínez" class="doctor-photo" loading="lazy">
+      </div>
+      <div class="doctor-info">
+        <span class="doctor-role">Directora Médica · Medicina y Cirugía Bucofacial</span>
+        <h3 class="doctor-name">Dra. Silvia Llamas Martínez</h3>
+        <p class="doctor-colegiado">Nº de Colegiado: 28005793</p>
+        <ul class="doctor-bio">
+          <li>Doctora por la Universidad Complutense de Madrid (UCM)</li>
+          <li>Especialista en Medicina y Cirugía Bucofacial</li>
+          <li>Profesora Colaboradora Honorífica de la UCM — Dpto. de Medicina y Cirugía</li>
+          <li>Profesora Contratada Doctora de la Universidad Alfonso X el Sabio (UAX)</li>
+          <li>Profesora del Curso de Formación Continua «Bases Prácticas en Medicina Oral» — Unidad de Formación Continua de la UCM</li>
+          <li>13 artículos publicados en revistas nacionales e internacionales</li>
+          <li>Más de 12 cursos impartidos y más de 50 comunicaciones y ponencias en Congresos Científicos Nacionales e Internacionales</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Dra. Paloma Cancela -->
+    <div class="doctor-card fade-in">
+      <div class="doctor-photo-wrap">
+        <img src="img/equipo_paloma.jpg" alt="Dra. Paloma Cancela Rodríguez" class="doctor-photo" loading="lazy">
+      </div>
+      <div class="doctor-info">
+        <span class="doctor-role">Directora Médica · Medicina y Cirugía Bucofacial</span>
+        <h3 class="doctor-name">Dra. Paloma Cancela Rodríguez</h3>
+        <p class="doctor-colegiado">Nº de Colegiado: 28005753</p>
+        <ul class="doctor-bio">
+          <li>Doctora por la Universidad Complutense de Madrid (UCM)</li>
+          <li>Especialista en Medicina y Cirugía Bucofacial</li>
+          <li>Profesora Colaboradora Honorífica de la UCM — Dpto. de Medicina y Cirugía (2005–2008)</li>
+          <li>19 artículos publicados en revistas nacionales e internacionales</li>
+          <li>Más de 10 cursos impartidos y más de 20 comunicaciones y ponencias en Congresos Científicos Nacionales e Internacionales</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ORTODONCISTA ── -->
+<section class="team-section" id="ortodoncista" aria-labelledby="ortodoncista-title">
+  <div class="container">
+    <div class="team-section-header fade-in">
+      <span class="label-tag">Especialista</span>
+      <h2 id="ortodoncista-title">Ortodoncista</h2>
+    </div>
+    <div class="doctor-card fade-in">
+      <div class="doctor-photo-wrap" style="background:#f0f4fc;">
+        <img src="img/equipo_ortodoncia.jpg" alt="Ortodoncia - Dr. Daniel Horta Poyal" class="doctor-photo" loading="lazy" style="object-position:center;">
+      </div>
+      <div class="doctor-info">
+        <span class="doctor-role">Especialista en Ortodoncia</span>
+        <h3 class="doctor-name">Dr. Daniel Horta Poyal</h3>
+        <p class="doctor-colegiado">Licenciado en Odontología por la UCM</p>
+        <ul class="doctor-bio">
+          <li>Licenciado en Odontología por la Universidad Complutense de Madrid (UCM), promoción 1992–93</li>
+          <li>Tesina de Licenciatura en el Departamento de Profilaxis, Odontopediatría y Ortodoncia (UCM)</li>
+          <li>Formación en Ortodoncia bajo la dirección del Dr. D. José Alijarde Quimera</li>
+          <li>Profesor de la Universidad Alfonso X El Sabio (UAX) — cursos 2001–02 y 2002–03</li>
+          <li>Experto Universitario en Odontología Legal y Forense por la UAX</li>
+          <li>Alto nivel de inglés y francés — estancias en Francia, Inglaterra y EE.UU.</li>
+          <li>Práctica de Ortodoncia en centros privados desde 1994</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ODONTOPEDIATRA ── -->
+<section class="team-section alt" id="odontopediatra" aria-labelledby="odontopediatra-title">
+  <div class="container">
+    <div class="team-section-header fade-in">
+      <span class="label-tag">Especialista</span>
+      <h2 id="odontopediatra-title">Odontopediatra</h2>
+    </div>
+    <div class="doctor-card fade-in" style="grid-template-columns:280px 1fr;">
+      <div class="doctor-photo-wrap">
+        <img src="img/equipo_lara.jpg" alt="Dra. Lara Magdaleno Huertas" class="doctor-photo" loading="lazy">
+      </div>
+      <div class="doctor-info">
+        <span class="doctor-role">Especialista en Odontopediatría</span>
+        <h3 class="doctor-name">Dra. Lara Magdaleno Huertas</h3>
+        <p class="doctor-colegiado">Licenciada en Odontología — UCM, 2001</p>
+        <ul class="doctor-bio">
+          <li>Licenciada en Odontología por la Universidad Complutense de Madrid (UCM), 2001</li>
+          <li>Máster en Odontopediatría — Hospital San Rafael, Madrid, 2002. Miembro de la SEOP</li>
+          <li>Postgrado en Ortodoncia — Fundación Gnathos, Madrid, 2007</li>
+          <li>Postgrado en Ortopedia Funcional, Madrid, 2009</li>
+          <li>Experta Universitaria en Psicología del Coaching — Coach profesional (UNED, 2013)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ENDODONCISTA ── -->
+<section class="team-section" id="endodoncista" aria-labelledby="endodoncista-title">
+  <div class="container">
+    <div class="team-section-header fade-in">
+      <span class="label-tag">Especialista</span>
+      <h2 id="endodoncista-title">Endodoncista</h2>
+    </div>
+    <div class="doctor-card fade-in">
+      <div class="doctor-photo-wrap">
+        <div class="doctor-photo-placeholder">
+          <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="40" cy="28" r="18"/>
+            <path d="M10 72C10 56 24 44 40 44C56 44 70 56 70 72"/>
+          </svg>
+        </div>
+      </div>
+      <div class="doctor-info">
+        <span class="doctor-role">Especialista en Endodoncia</span>
+        <h3 class="doctor-name">Dra. Marta Real Mourelle</h3>
+        <p class="doctor-colegiado">Especialista en Endodoncia</p>
+        <ul class="doctor-bio">
+          <li>Especialista en tratamientos de conductos y patología pulpar</li>
+          <li>Formación avanzada en endodoncia con instrumentación rotatoria y localizadores de ápice</li>
+          <li>Experiencia en casos de alta complejidad: retratamientos y cirugía apical</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ODONTOLOGÍA GENERAL ── -->
+<section class="team-section alt" id="odontologia-general" aria-labelledby="odontologia-title">
+  <div class="container">
+    <div class="team-section-header fade-in">
+      <span class="label-tag">Odontología General</span>
+      <h2 id="odontologia-title">Odontología General</h2>
+    </div>
+    <div class="doctor-card fade-in">
+      <div class="doctor-photo-wrap">
+        <img src="img/equipo_oscar.jpg" alt="Óscar Iglesias Velázquez" class="doctor-photo" loading="lazy">
+      </div>
+      <div class="doctor-info">
+        <span class="doctor-role">Odontología General · Medicina Oral · Cirugía Bucal</span>
+        <h3 class="doctor-name">Óscar Iglesias Velázquez</h3>
+        <p class="doctor-colegiado">Grado en Odontología — UCM</p>
+        <ul class="doctor-bio">
+          <li>Grado en Odontología por la Universidad Complutense de Madrid (UCM)</li>
+          <li>Título Propio de Especialista en Medicina Oral por la UCM</li>
+          <li>Título Propio de Cirugía Bucal e Implantología por la UCM (en curso)</li>
+          <li>Doctorado en Ciencias Odontológicas por la UCM (en curso)</li>
+          <li>Profesor del Título Propio de Especialista en Medicina Oral (UCM)</li>
+          <li>Profesor colaborador en docencia práctica en Cirugía Bucal I e Implantología</li>
+          <li>Numerosas publicaciones científicas en revistas de impacto nacionales e internacionales, además de asistencia a cursos y congresos</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HIGIENISTA Y PERSONAL AUXILIAR ── -->
+<section class="team-section" id="higienista" aria-labelledby="higienista-title">
+  <div class="container">
+    <div class="team-section-header fade-in">
+      <span class="label-tag">Equipo de Apoyo</span>
+      <h2 id="higienista-title">Higienista y Personal Auxiliar</h2>
+      <p>El equipo de apoyo que hace posible la atención diaria de nuestros pacientes con profesionalidad y calidez.</p>
+    </div>
+
+    <div class="staff-grid">
+      <!-- María Puig -->
+      <div class="staff-card fade-in">
+        <img src="img/equipo_maria.jpg" alt="María Puig Martínez" class="staff-avatar" loading="lazy">
+        <span class="staff-role-badge">Higienista y Administración</span>
+        <h3 class="staff-name">María Puig Martínez</h3>
+        <ul class="staff-bio">
+          <li>Licenciada por la Universidad Autónoma de Madrid (UAM)</li>
+          <li>Técnico Superior en Higiene Bucodental</li>
+        </ul>
+      </div>
+
+      <!-- Cristina López -->
+      <div class="staff-card fade-in">
+        <img src="img/equipo_cristina.jpg" alt="Cristina López Peláez" class="staff-avatar" loading="lazy">
+        <span class="staff-role-badge">Auxiliar Clínica</span>
+        <h3 class="staff-name">Cristina López Peláez</h3>
+        <ul class="staff-bio">
+          <li>Técnico Auxiliar de Clínica por el Instituto Ciudad de Jaén (Madrid)</li>
+        </ul>
+      </div>
+
+      <!-- Alicia Murcia -->
+      <div class="staff-card fade-in">
+        <img src="img/equipo_alicia.jpg" alt="Alicia Murcia Carrasco" class="staff-avatar" loading="lazy">
+        <span class="staff-role-badge">Auxiliar Clínica</span>
+        <h3 class="staff-name">Alicia Murcia Carrasco</h3>
+        <ul class="staff-bio">
+          <li>Técnico Auxiliar de Clínica por EFA Valdemilanos (Madrid)</li>
+          <li>Técnico Superior en Imagen para el Diagnóstico — Centro FP Arduán (Sevilla)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GALERÍA DE INSTALACIONES ── -->
+<section class="team-section alt" id="instalaciones" aria-labelledby="instalaciones-title">
+  <div class="container">
+    <div class="team-section-header fade-in">
+      <span class="label-tag">Nuestras Instalaciones</span>
+      <h2 id="instalaciones-title">Una clínica pensada para tu comodidad</h2>
+      <p>Local reformado, accesible y equipado con la última tecnología en diagnóstico y tratamiento dental.</p>
+    </div>
+    <div class="gallery-grid fade-in">
+      <!-- Fila 1: recepción | pasillo | gabinete -->
+      <div class="gallery-item">
+        <img src="img/clinica_recepcion1.jpg" alt="Recepción y sala de espera de Clínica Dental Guadalix" loading="lazy">
+        <div class="gallery-caption">Recepción y sala de espera</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/clinica_recepcion2.jpg" alt="Pasillo y acceso de Clínica Dental Guadalix" loading="lazy">
+        <div class="gallery-caption">Acceso y pasillos</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/clinica_gabinete1.jpg" alt="Gabinete dental con sillón y equipamiento" loading="lazy">
+        <div class="gallery-caption">Gabinete de tratamiento</div>
+      </div>
+      <!-- Fila 2: gabinete2 | rayos1 | rayos2 -->
+      <div class="gallery-item">
+        <img src="img/clinica_gabinete2.jpg" alt="Segundo gabinete dental" loading="lazy">
+        <div class="gallery-caption">Segundo gabinete</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/clinica_rayos1.jpg" alt="Sala de radiología panorámica" loading="lazy">
+        <div class="gallery-caption">Sala de radiodiagnóstico</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/clinica_rayos2.jpg" alt="Equipo de radiología digital y ordenador con radiografía" loading="lazy">
+        <div class="gallery-caption">Diagnóstico por imagen digital</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="team-cta" aria-label="Llamada a la acción">
+  <div class="container">
+    <h2>¿Quieres conocernos en persona?</h2>
+    <p>Ven a visitarnos o pide tu primera cita de diagnóstico gratuita. Estaremos encantados de atenderte.</p>
+    <a href="index.html#contacto" class="btn-white-lg">Pedir cita →</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg width="24" height="24" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3C16 3 10 7 8 13C6 19 10 23 13 23C14.5 23 15.5 22 16 21C16.5 22 17.5 23 19 23C22 23 26 19 24 13C22 7 16 3 16 3Z"/><path d="M16 21V29"/></svg>
+          Clínica Dental <span>Guadalix</span>
+        </div>
+        <p>Odontología integral y personalizada en Guadalix de la Sierra. Más de 15 años cuidando las sonrisas de las familias de la Sierra Norte de Madrid.</p>
+      </div>
+      <div class="footer-col">
+        <h4>El Equipo</h4>
+        <ul>
+          <li><a href="#directoras">Directoras Médicas</a></li>
+          <li><a href="#ortodoncista">Ortodoncista</a></li>
+          <li><a href="#odontopediatra">Odontopediatra</a></li>
+          <li><a href="#endodoncista">Endodoncista</a></li>
+          <li><a href="#odontologia-general">Odontología General</a></li>
+          <li><a href="#higienista">Higienista y Auxiliares</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="index.html#servicios">Ortodoncia</a></li>
+          <li><a href="index.html#servicios">Implantes</a></li>
+          <li><a href="index.html#servicios">Blanqueamiento</a></li>
+          <li><a href="index.html#servicios">Endodoncia</a></li>
+          <li><a href="index.html#servicios">Odontopediatría</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="tel:+34918475574">📞 91 847 55 74</a></li>
+          <li><a href="mailto:guadalixclinicadental@gmail.com">✉️ guadalixclinicadental@gmail.com</a></li>
+          <li><a href="https://wa.me/34918475574" target="_blank" rel="noopener">💬 WhatsApp</a></li>
+          <li><a href="index.html#contacto">📍 C/ Nogal, nº 3 · Guadalix de la Sierra</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Clínica Dental Guadalix · Todos los derechos reservados</span>
+      <div class="footer-legal-links">
+        <a href="privacidad.html">Política de Privacidad</a>
+        <a href="cookies.html">Política de Cookies</a>
+        <a href="aviso-legal.html">Aviso Legal</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── WHATSAPP FLOAT ── -->
+<a href="https://wa.me/34918475574?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20cita%20en%20la%20cl%C3%ADnica." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+// Navbar scroll + hamburger (mismo patrón que index)
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+}, { passive: true });
+
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+const closeMenuBtn = document.getElementById('close-menu');
+
+hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
+closeMenuBtn.addEventListener('click', closeMobileMenu);
+function closeMobileMenu() { mobileMenu.classList.remove('open'); }
+
+// Navbar starts scrolled since hero is not full-height
+navbar.classList.add('scrolled');
+
+// Fade-in
+const fadeEls = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.1 });
+fadeEls.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

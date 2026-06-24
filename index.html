@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Dental Guadalix | Dentista en Guadalix de la Sierra, Madrid</title>
+  <meta name="description" content="Clínica Dental Guadalix ofrece odontología integral personalizada: ortodoncia, implantes, blanqueamiento, endodoncia y más. Reserva tu cita online en Guadalix de la Sierra, Madrid.">
+  <meta name="keywords" content="clínica dental Guadalix, dentista Guadalix de la Sierra, ortodoncia Guadalix, implantes dentales Madrid Norte, dentista Guadalix">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://clinicadentalguadalix.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Clínica Dental Guadalix | Tu dentista de confianza">
+  <meta property="og:description" content="Odontología integral y personalizada en Guadalix de la Sierra. Reserva tu primera visita gratuita.">
+  <meta property="og:url" content="https://clinicadentalguadalix.com/">
+  <meta property="og:site_name" content="Clínica Dental Guadalix">
+  <meta property="og:image" content="https://clinicadentalguadalix.com/og-image.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Clínica Dental Guadalix">
+  <meta name="twitter:description" content="Odontología integral personalizada en Guadalix de la Sierra, Madrid.">
+
+  <!-- Google Analytics (GA4) — sustituir G-XXXXXXXXXX por tu ID real -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+  </script>
+
+  <!-- Schema.org / Datos estructurados -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Clínica Dental Guadalix",
+    "url": "https://clinicadentalguadalix.com",
+    "telephone": "+34918475574",
+    "email": "guadalixclinicadental@gmail.com",
+    "description": "Clínica dental de odontología integral en Guadalix de la Sierra, Madrid.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle Nogal, nº 3",
+      "addressLocality": "Guadalix de la Sierra",
+      "postalCode": "28794",
+      "addressRegion": "Madrid",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.7886,
+      "longitude": -3.5681
+    },
+    "openingHoursSpecification": [
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"14:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"16:00","closes":"20:00"}
+    ],
+    "priceRange": "€€",
+    "hasMap": "https://maps.google.com/?q=Guadalix+de+la+Sierra",
+    "sameAs": [
+      "https://www.facebook.com/clinicadentalguadalix",
+      "https://www.instagram.com/clinicadentalguadalix"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── COOKIE BANNER ── -->
+<div id="cookie-banner" role="dialog" aria-label="Aviso de cookies">
+  <p>
+    Usamos cookies propias y de terceros (Google Analytics) para analizar el tráfico de nuestra web y mejorar tu experiencia. Puedes aceptar todas o solo las necesarias. Más info en nuestra
+    <a href="cookies.html">Política de Cookies</a> y <a href="privacidad.html">Política de Privacidad</a>.
+  </p>
+  <div class="cookie-btns">
+    <button id="btn-only-essential">Solo esenciales</button>
+    <button id="btn-accept-all">Aceptar todas</button>
+  </div>
+</div>
+
+<!-- ── MOBILE MENU ── -->
+<div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menú móvil">
+  <button class="close-menu" id="close-menu" aria-label="Cerrar menú">✕</button>
+  <a href="#servicios" class="nav-link" onclick="closeMobileMenu()">Servicios</a>
+  <a href="quienes-somos.html" class="nav-link" onclick="closeMobileMenu()">Quiénes Somos</a>
+  <a href="tratamientos.html" class="nav-link" onclick="closeMobileMenu()">Tratamientos</a>
+  <a href="#horarios" class="nav-link" onclick="closeMobileMenu()">Horarios</a>
+  <a href="#testimonios" class="nav-link" onclick="closeMobileMenu()">Testimonios</a>
+  <a href="#contacto" class="nav-link" onclick="closeMobileMenu()">Contacto</a>
+  <a href="#contacto" class="btn btn-primary" onclick="closeMobileMenu()">Reservar Cita</a>
+</div>
+
+<!-- ── NAVBAR ── -->
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="Inicio Clínica Dental Guadalix">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 3C16 3 10 7 8 13C6 19 10 23 13 23C14.5 23 15.5 22 16 21C16.5 22 17.5 23 19 23C22 23 26 19 24 13C22 7 16 3 16 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="rgba(33,118,255,0.15)"/>
+          <path d="M16 21V29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        Clínica Dental <span>Guadalix</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
+        <li><a href="tratamientos.html" class="nav-link">Tratamientos</a></li>
+        <li><a href="#horarios" class="nav-link">Horarios</a></li>
+        <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+      <a href="#contacto" class="btn btn-primary nav-cta">Reservar Cita</a>
+      <div class="hamburger" id="hamburger" role="button" aria-label="Abrir menú" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero" aria-label="Presentación principal">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content fade-in">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Aceptando nuevos pacientes · Guadalix de la Sierra
+        </div>
+        <h1 class="hero-title">
+          Tu sonrisa, <span>nuestra</span> prioridad
+        </h1>
+        <p class="hero-sub">
+          Odontología integral personalizada en el corazón de la Sierra de Madrid. Tratamos a cada paciente con la atención y el tiempo que merece.
+        </p>
+        <div class="hero-actions">
+          <a href="#contacto" class="btn btn-primary">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            Pedir cita
+          </a>
+          <a href="#servicios" class="btn btn-outline">Ver tratamientos</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-num">+15</div>
+            <div class="stat-label">Años de experiencia</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">98%</div>
+            <div class="stat-label">Pacientes satisfechos</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">2.500+</div>
+            <div class="stat-label">Pacientes atendidos</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-img-wrap fade-in">
+        <img
+          src="img/clinica_gabinete1.jpg"
+          alt="Gabinete dental Clínica Dental Guadalix"
+          class="hero-img"
+          loading="eager"
+        >
+        <div class="hero-card-float">
+          <div class="icon-wrap">
+            <svg width="22" height="22" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          </div>
+          <div>
+            <strong>Primera visita gratuita</strong>
+            <small>Diagnóstico sin compromiso</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICIOS ── -->
+<section id="servicios" class="section" aria-labelledby="servicios-title">
+  <div class="container">
+    <div class="services-header fade-in">
+      <span class="label-tag">Nuestros Tratamientos</span>
+      <h2 class="section-title" id="servicios-title">Todo lo que tu boca necesita, en un solo lugar</h2>
+      <p class="section-sub">Desde revisiones preventivas hasta tratamientos estéticos avanzados, contamos con las últimas tecnologías para cuidar tu salud bucodental.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 4C16 4 10 8 8 13C6 18 10 22 13 22C14.5 22 15.5 21 16 20C16.5 21 17.5 22 19 22C22 22 26 18 24 13C22 8 16 4 16 4Z"/><path d="M16 20V28"/></svg>
+        </div>
+        <h3>Ortodoncia</h3>
+        <p>Brackets metálicos, brackets estéticos y alineadores transparentes (Invisalign). Diseñamos el tratamiento más adecuado para tu caso.</p>
+      </article>
+      <article class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="16" cy="12" r="6"/><path d="M8 28C8 23.58 11.58 20 16 20C20.42 20 24 23.58 24 28"/><path d="M22 8l4-4M10 8L6 4"/></svg>
+        </div>
+        <h3>Implantes Dentales</h3>
+        <p>Recupera la función y estética de tus dientes perdidos con implantes de titanio de alta calidad. Resultados naturales y duraderos.</p>
+      </article>
+      <article class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 14C6 8 10 4 14 4C16 4 17.5 5 18 7"/><path d="M18 7C20 4 22 3 25 5C28 7 28 12 26 15L16 28L6 15C5.5 14.5 6 14 6 14Z"/><path d="M12 16h8M16 12v8"/></svg>
+        </div>
+        <h3>Odontología Estética</h3>
+        <p>Carillas de porcelana, blanqueamiento dental profesional y diseño de sonrisa. Tu sonrisa perfecta está más cerca de lo que crees.</p>
+      </article>
+      <article class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 16C8 11 11 8 16 8C21 8 24 11 24 16C24 21 21 24 16 24"/><path d="M16 24V28M13 28h6"/><path d="M16 12v4l3 3"/></svg>
+        </div>
+        <h3>Endodoncia</h3>
+        <p>Tratamiento de conductos con las últimas técnicas para salvar dientes dañados o infectados, eliminando el dolor de forma definitiva.</p>
+      </article>
+      <article class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20L12 12L16 16L20 10L28 18"/><path d="M4 26h24"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>
+        </div>
+        <h3>Periodoncia</h3>
+        <p>Diagnóstico y tratamiento de la enfermedad periodontal (piorrea). Protegemos tus encías para mantener una boca sana a largo plazo.</p>
+      </article>
+      <article class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="6" y="6" width="20" height="20" rx="4"/><path d="M6 14h20M14 6v20"/></svg>
+        </div>
+        <h3>Odontopediatría</h3>
+        <p>Cuidado dental especializado para los más pequeños desde los primeros dientes. Un primer paso positivo hacia hábitos saludables de por vida.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── POR QUÉ ELEGIRNOS ── -->
+<section id="nosotros" class="section section-alt" aria-labelledby="nosotros-title">
+  <div class="container">
+    <div class="why-inner">
+      <div class="fade-in">
+        <span class="label-tag">Por Qué Elegirnos</span>
+        <h2 class="section-title" id="nosotros-title">Más de 15 años cuidando sonrisas en Guadalix</h2>
+        <p class="section-sub">Somos una clínica de referencia en la Sierra Norte de Madrid, comprometida con la excelencia clínica y el trato humano.</p>
+        <ul class="why-list">
+          <li class="why-item">
+            <div class="why-check"><svg viewBox="0 0 14 14" fill="none" stroke="white" stroke-width="2"><polyline points="2 7 6 11 12 3"/></svg></div>
+            <div><strong>Tecnología de última generación</strong><p>Radiografía digital, escáner intraoral 3D y blanqueamiento LED en clínica.</p></div>
+          </li>
+          <li class="why-item">
+            <div class="why-check"><svg viewBox="0 0 14 14" fill="none" stroke="white" stroke-width="2"><polyline points="2 7 6 11 12 3"/></svg></div>
+            <div><strong>Equipo especializado y empático</strong><p>Cada profesional cuenta con formación continua y trato paciente y cercano.</p></div>
+          </li>
+          <li class="why-item">
+            <div class="why-check"><svg viewBox="0 0 14 14" fill="none" stroke="white" stroke-width="2"><polyline points="2 7 6 11 12 3"/></svg></div>
+            <div><strong>Presupuesto sin compromiso</strong><p>Primera visita de diagnóstico gratuita y financiación flexible sin intereses.</p></div>
+          </li>
+          <li class="why-item">
+            <div class="why-check"><svg viewBox="0 0 14 14" fill="none" stroke="white" stroke-width="2"><polyline points="2 7 6 11 12 3"/></svg></div>
+            <div><strong>Clínica familiar de proximidad</strong><p>Llevamos tratando a las familias de Guadalix y la comarca durante generaciones.</p></div>
+          </li>
+          <li class="why-item">
+            <div class="why-check"><svg viewBox="0 0 14 14" fill="none" stroke="white" stroke-width="2"><polyline points="2 7 6 11 12 3"/></svg></div>
+            <div><strong>Estrictos protocolos de esterilización</strong><p>Cumplimos con todos los requisitos sanitarios del Ministerio de Sanidad.</p></div>
+          </li>
+        </ul>
+      </div>
+      <div class="fade-in">
+        <img
+          src="img/clinica_recepcion1.jpg"
+          alt="Recepción y sala de espera de Clínica Dental Guadalix"
+          class="why-img"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HORARIOS ── -->
+<section id="horarios" class="section" aria-labelledby="horarios-title">
+  <div class="container">
+    <div class="services-header fade-in">
+      <span class="label-tag">Atención</span>
+      <h2 class="section-title" id="horarios-title">Horario de la clínica</h2>
+      <p class="section-sub">En Guadalix Clínica Dental le ofrecemos un amplio horario de atención para que se adapte a sus necesidades. Para reducir tiempos de espera, rogamos cojan <strong>cita previa</strong> en el <a href="tel:+34918475574" style="color:var(--accent);">91 847 55 74</a>.</p>
+    </div>
+
+    <div class="schedule-grid fade-in">
+
+      <!-- Dra. Silvia Llamas -->
+      <div class="schedule-card">
+        <h3>👩‍⚕️ Dra. Silvia Llamas</h3>
+        <p style="font-size:12px;color:var(--text-muted);margin-bottom:14px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;">Directora Médica</p>
+        <div class="schedule-row"><span class="schedule-day">Lunes</span><span class="schedule-time">10:00 – 14:00</span></div>
+        <div class="schedule-row"><span class="schedule-day">Miércoles</span><span class="schedule-time">10:00 – 14:00 · 15:30 – 19:30</span></div>
+        <div class="schedule-row"><span class="schedule-day">Martes / Jueves / Viernes</span><span class="schedule-closed">Consultar</span></div>
+      </div>
+
+      <!-- Dra. Paloma Cancela -->
+      <div class="schedule-card">
+        <h3>👩‍⚕️ Dra. Paloma Cancela</h3>
+        <p style="font-size:12px;color:var(--text-muted);margin-bottom:14px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;">Directora Médica</p>
+        <div class="schedule-row"><span class="schedule-day">Martes</span><span class="schedule-time">10:30 – 14:00</span></div>
+        <div class="schedule-row"><span class="schedule-day">Jueves</span><span class="schedule-time">10:30 – 14:00</span></div>
+        <div class="schedule-row"><span class="schedule-day">Resto de días</span><span class="schedule-closed">Consultar</span></div>
+      </div>
+
+      <!-- D. Óscar Iglesias -->
+      <div class="schedule-card">
+        <h3>👨‍⚕️ D. Óscar Iglesias</h3>
+        <p style="font-size:12px;color:var(--text-muted);margin-bottom:14px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;">Odontología General</p>
+        <div class="schedule-row"><span class="schedule-day">Miércoles</span><span class="schedule-time">15:30 – 19:30</span></div>
+        <div class="schedule-row"><span class="schedule-day">Viernes</span><span class="schedule-time">10:00 – 14:00</span></div>
+        <div class="schedule-row"><span class="schedule-day">Resto de días</span><span class="schedule-closed">Consultar</span></div>
+      </div>
+
+      <!-- Dra. Lara Magdaleno -->
+      <div class="schedule-card">
+        <h3>👩‍⚕️ Dra. Lara Magdaleno</h3>
+        <p style="font-size:12px;color:var(--text-muted);margin-bottom:14px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;">Odontopediatra</p>
+        <div class="schedule-row"><span class="schedule-day">Jueves alternos</span><span class="schedule-time">15:30 – 19:30</span></div>
+        <div class="schedule-row"><span class="schedule-day">Resto de días</span><span class="schedule-closed">Consultar</span></div>
+      </div>
+
+      <!-- Dr. Daniel Horta -->
+      <div class="schedule-card">
+        <h3>👨‍⚕️ Dr. Daniel Horta</h3>
+        <p style="font-size:12px;color:var(--text-muted);margin-bottom:14px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;">Ortodoncista</p>
+        <div class="schedule-row"><span class="schedule-day">Horario</span><span class="schedule-closed">Consultar en clínica</span></div>
+      </div>
+
+      <!-- Dra. Marta Real -->
+      <div class="schedule-card">
+        <h3>👩‍⚕️ Dra. Marta Real</h3>
+        <p style="font-size:12px;color:var(--text-muted);margin-bottom:14px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;">Endodoncista</p>
+        <div class="schedule-row"><span class="schedule-day">Horario</span><span class="schedule-closed">Consultar en clínica</span></div>
+      </div>
+
+    </div>
+
+    <div class="schedule-note fade-in">
+      ⚡ <strong>¿Urgencia dental?</strong> Llámanos al <a href="tel:+34918475574" style="color:var(--accent);font-weight:600;">91 847 55 74</a> y atenderemos tu caso en el menor tiempo posible.
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIOS ── -->
+<section id="testimonios" class="section section-alt" aria-labelledby="testimonios-title">
+  <div class="container">
+    <div class="testimonials-header fade-in">
+      <span class="label-tag">Opiniones</span>
+      <h2 class="section-title" id="testimonios-title">Lo que dicen nuestros pacientes</h2>
+      <p class="section-sub" style="margin:0 auto;">Más de 2.500 pacientes confían en nosotros. Sus palabras son el mejor aval.</p>
+    </div>
+    <div class="testimonials-track fade-in" aria-label="Carrusel de testimonios">
+      <div class="testimonials-inner" id="testimonials-inner">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Llevaba años con miedo al dentista y aquí me han tratado con una paciencia increíble. El tratamiento de ortodoncia ha cambiado mi vida. El equipo es un 10."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">ML</div>
+            <div>
+              <div class="author-name">María L.</div>
+              <div class="author-label">Paciente ortodoncia · Guadalix</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Me pusieron dos implantes y el proceso fue mucho más sencillo de lo esperado. Sin dolor, con seguimiento constante y un resultado estético espectacular."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JR</div>
+            <div>
+              <div class="author-name">José R.</div>
+              <div class="author-label">Paciente implantes · Miraflores</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Llevo a mis hijos desde pequeños. Un equipo de verdad familiar, el trato con los niños es excepcional. Nos sentimos como en casa cada vez que venimos."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AG</div>
+            <div>
+              <div class="author-name">Ana G.</div>
+              <div class="author-label">Paciente familia · Guadalix</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"El blanqueamiento quedó perfecto. Me explicaron todo el proceso, el resultado duró mucho más de lo que imaginaba. Muy recomendable y muy buen precio."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">CS</div>
+            <div>
+              <div class="author-name">Carlos S.</div>
+              <div class="author-label">Paciente estética · Colmenar Viejo</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Tuve una endodoncia de urgencia y me atendieron el mismo día. Profesionalidad absoluta. Ya no cambio de clínica, aunque me mudé a Madrid capital."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">LM</div>
+            <div>
+              <div class="author-name">Laura M.</div>
+              <div class="author-label">Paciente endodoncia · Madrid</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-dots" role="group" aria-label="Navegación del carrusel">
+      <button class="dot-btn active" data-index="0" aria-label="Testimonial 1"></button>
+      <button class="dot-btn" data-index="1" aria-label="Testimonial 2"></button>
+      <button class="dot-btn" data-index="2" aria-label="Testimonial 3"></button>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACTO / FORMULARIO ── -->
+<section id="contacto" class="section" aria-labelledby="contacto-title">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="fade-in">
+        <span class="label-tag">Contacto</span>
+        <h2 class="section-title" id="contacto-title">¿Hablamos?</h2>
+        <p>Estamos en Guadalix de la Sierra, a menos de una hora de Madrid. Puedes escribirnos, llamarnos o simplemente pasar por la clínica.</p>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.41a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .94h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.37a16 16 0 006.72 6.72l1.79-1.34a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <span><a href="tel:+34918475574">91 847 55 74</a></span>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <span><a href="mailto:guadalixclinicadental@gmail.com">guadalixclinicadental@gmail.com</a></span>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <span>Calle Nogal, nº 3 · 28794 Guadalix de la Sierra, Madrid</span>
+        </div>
+
+        <!-- Mapa Google Maps embed -->
+        <div class="map-wrap">
+          <iframe
+            title="Ubicación Clínica Dental Guadalix"
+            src="https://maps.google.com/maps?q=Guadalix+de+la+Sierra,+Madrid,+España&output=embed&z=14"
+            allowfullscreen loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="fade-in">
+        <div class="form-card">
+          <h3>Solicita tu cita</h3>
+          <p>Rellena el formulario y te contactaremos en menos de 24 horas.</p>
+
+          <div id="form-success" class="form-success" role="alert">
+            ✅ ¡Mensaje enviado! Nos pondremos en contacto contigo pronto.
+          </div>
+          <div id="form-error" class="form-error" role="alert">
+            ⚠️ Ha ocurrido un error al enviar. Llámanos al 918 47 00 00 o inténtalo de nuevo.
+          </div>
+
+          <form id="contact-form" novalidate aria-label="Formulario de contacto">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre">Nombre *</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="given-name">
+              </div>
+              <div class="form-group">
+                <label for="apellidos">Apellidos *</label>
+                <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos" required autocomplete="family-name">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="telefono">Teléfono *</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="6XX XXX XXX" required autocomplete="tel">
+              </div>
+              <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="tu@email.com" autocomplete="email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="servicio">Tratamiento de interés</label>
+              <select id="servicio" name="servicio">
+                <option value="">Selecciona un tratamiento…</option>
+                <option>Ortodoncia</option>
+                <option>Implantes dentales</option>
+                <option>Odontología estética / Blanqueamiento</option>
+                <option>Endodoncia</option>
+                <option>Periodoncia</option>
+                <option>Odontopediatría</option>
+                <option>Revisión general</option>
+                <option>Urgencia dental</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje o consulta</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos brevemente tu situación o duda…"></textarea>
+            </div>
+            <div class="form-consent">
+              <input type="checkbox" id="consent" name="consent" required>
+              <label for="consent" style="font-size:13px;font-weight:400;color:var(--text-muted);margin:0;">
+                He leído y acepto la <a href="privacidad.html" target="_blank">Política de Privacidad</a>. Consiento el tratamiento de mis datos para gestionar mi solicitud de cita.
+              </label>
+            </div>
+            <button type="submit" class="btn-submit" id="submit-btn">
+              Enviar solicitud de cita →
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BAND ── -->
+<section class="cta-band" aria-label="Llamada a la acción">
+  <div class="container">
+    <h2>Primera visita gratuita y sin compromiso</h2>
+    <p>Diagnóstico completo, radiografía panorámica y plan de tratamiento personalizado. Sin coste.</p>
+    <a href="#contacto" class="btn-white">Reservar ahora →</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg width="24" height="24" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3C16 3 10 7 8 13C6 19 10 23 13 23C14.5 23 15.5 22 16 21C16.5 22 17.5 23 19 23C22 23 26 19 24 13C22 7 16 3 16 3Z"/><path d="M16 21V29"/></svg>
+          Clínica Dental <span>Guadalix</span>
+        </div>
+        <p>Odontología integral y personalizada en Guadalix de la Sierra. Más de 15 años cuidando las sonrisas de las familias de la Sierra Norte de Madrid.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#servicios">Ortodoncia</a></li>
+          <li><a href="#servicios">Implantes</a></li>
+          <li><a href="#servicios">Blanqueamiento</a></li>
+          <li><a href="#servicios">Endodoncia</a></li>
+          <li><a href="#servicios">Periodoncia</a></li>
+          <li><a href="#servicios">Odontopediatría</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Clínica</h4>
+        <ul>
+          <li><a href="#nosotros">Quiénes somos</a></li>
+          <li><a href="#horarios">Horarios</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="tel:+34918475574">📞 91 847 55 74</a></li>
+          <li><a href="mailto:guadalixclinicadental@gmail.com">✉️ guadalixclinicadental@gmail.com</a></li>
+          <li><a href="https://wa.me/34600000000" target="_blank" rel="noopener">💬 WhatsApp</a></li>
+          <li><a href="#contacto">📍 Guadalix de la Sierra</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Clínica Dental Guadalix · Todos los derechos reservados</span>
+      <div class="footer-legal-links">
+        <a href="privacidad.html">Política de Privacidad</a>
+        <a href="cookies.html">Política de Cookies</a>
+        <a href="aviso-legal.html">Aviso Legal</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── WHATSAPP FLOAT ── -->
+<a
+  href="https://wa.me/34600000000?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20cita%20en%20la%20cl%C3%ADnica."
+  class="whatsapp-float"
+  target="_blank" rel="noopener noreferrer"
+  aria-label="Contactar por WhatsApp"
+>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>

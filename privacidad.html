@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad y Aviso Legal | Clínica Dental Guadalix</title>
+  <meta name="description" content="Política de privacidad, protección de datos y aviso legal de Clínica Dental Guadalix conforme al RGPD y la LOPDGDD.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://clinicadentalguadalix.com/privacidad.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0A2463; --accent: #2176FF; --surface: #F4F7FC;
+      --text-dark: #0D1B2A; --text-body: #4A5568; --text-muted: #8A9BB0;
+      --white: #FFFFFF; --success: #10B981;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text-body); background: var(--white); line-height: 1.7; }
+    a { color: var(--accent); text-decoration: underline; }
+    a:hover { color: var(--primary); }
+
+    header {
+      background: var(--primary); padding: 18px 0;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 2px 20px rgba(10,36,99,0.15);
+    }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-size: 18px; font-weight: 800; color: var(--white); text-decoration: none; }
+    .logo span { color: #7EB3FF; }
+    .back-link { color: rgba(255,255,255,0.8); font-size: 14px; text-decoration: none; display: flex; align-items: center; gap: 6px; }
+    .back-link:hover { color: white; }
+
+    .page-hero {
+      background: linear-gradient(135deg, var(--primary), #1E5FA8);
+      padding: 56px 0; text-align: center; color: white;
+    }
+    .page-hero h1 { font-size: clamp(26px, 4vw, 40px); font-weight: 800; margin-bottom: 10px; }
+    .page-hero p { font-size: 16px; color: rgba(255,255,255,0.75); }
+
+    .toc {
+      background: var(--surface); border-radius: 14px; padding: 28px 32px;
+      margin: 40px 0; border-left: 4px solid var(--accent);
+    }
+    .toc h3 { font-size: 15px; font-weight: 700; color: var(--text-dark); margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .toc ol { padding-left: 20px; }
+    .toc li { font-size: 14px; margin-bottom: 6px; }
+
+    main { padding: 48px 0 72px; }
+
+    section[id] { scroll-margin-top: 80px; }
+
+    h2 {
+      font-size: clamp(20px, 3vw, 26px); font-weight: 800;
+      color: var(--text-dark); margin: 48px 0 16px;
+      padding-bottom: 12px; border-bottom: 2px solid var(--surface);
+      display: flex; align-items: center; gap: 10px;
+    }
+    h2 .section-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--accent); color: white; font-size: 14px; font-weight: 700; flex-shrink: 0;
+    }
+    h3 { font-size: 17px; font-weight: 700; color: var(--text-dark); margin: 24px 0 10px; }
+    p { margin-bottom: 14px; font-size: 15px; }
+    ul, ol { padding-left: 22px; margin-bottom: 14px; }
+    li { font-size: 15px; margin-bottom: 6px; }
+    strong { color: var(--text-dark); }
+
+    .info-box {
+      background: #EEF4FF; border: 1px solid #C7D9F8; border-radius: 12px;
+      padding: 20px 24px; margin: 20px 0; font-size: 14px;
+    }
+    .info-box strong { display: block; color: var(--primary); margin-bottom: 6px; }
+
+    .rights-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0;
+    }
+    .right-card {
+      background: var(--surface); border-radius: 12px; padding: 18px 20px;
+    }
+    .right-card strong { display: block; color: var(--primary); font-size: 14px; margin-bottom: 4px; }
+    .right-card p { font-size: 13px; margin: 0; }
+
+    .table-wrap { overflow-x: auto; margin: 20px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    thead { background: var(--primary); color: white; }
+    th { padding: 12px 16px; text-align: left; font-weight: 600; }
+    td { padding: 11px 16px; border-bottom: 1px solid var(--surface); color: var(--text-body); }
+    tr:last-child td { border-bottom: none; }
+    tr:nth-child(even) { background: var(--surface); }
+
+    .contact-block {
+      background: var(--primary); color: white; border-radius: 16px;
+      padding: 32px; margin: 32px 0; text-align: center;
+    }
+    .contact-block h3 { color: white; margin: 0 0 10px; }
+    .contact-block p { color: rgba(255,255,255,0.8); font-size: 14px; margin-bottom: 6px; }
+    .contact-block a { color: #7EB3FF; }
+
+    .update-badge {
+      display: inline-block; background: var(--surface); border: 1px solid #D1DCF0;
+      border-radius: 8px; padding: 8px 14px; font-size: 13px; color: var(--text-muted); margin-bottom: 32px;
+    }
+
+    footer { background: var(--text-dark); color: rgba(255,255,255,0.5); padding: 24px 0; text-align: center; font-size: 13px; }
+    footer a { color: rgba(255,255,255,0.65); }
+
+    @media (max-width: 600px) {
+      .rights-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Clínica Dental <span>Guadalix</span></a>
+      <a href="index.html" class="back-link">← Volver al inicio</a>
+    </div>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <h1>Política de Privacidad y Aviso Legal</h1>
+    <p>Cumplimiento del RGPD (UE) 2016/679 y la LOPDGDD (LO 3/2018)</p>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+
+    <span class="update-badge">📅 Última actualización: junio de 2025</span>
+
+    <div class="toc">
+      <h3>Índice de contenidos</h3>
+      <ol>
+        <li><a href="#aviso-legal">Aviso Legal e Identificación del Responsable</a></li>
+        <li><a href="#datos-recopilados">Datos personales que recopilamos</a></li>
+        <li><a href="#finalidades">Finalidades y base legal del tratamiento</a></li>
+        <li><a href="#conservacion">Plazo de conservación de los datos</a></li>
+        <li><a href="#destinatarios">Destinatarios y transferencias internacionales</a></li>
+        <li><a href="#derechos">Tus derechos como interesado (RGPD)</a></li>
+        <li><a href="#seguridad">Medidas de seguridad</a></li>
+        <li><a href="#menores">Menores de edad</a></li>
+        <li><a href="#contacto-dpd">Contacto con el Responsable</a></li>
+      </ol>
+    </div>
+
+    <!-- 1. AVISO LEGAL -->
+    <section id="aviso-legal">
+      <h2><span class="section-num">1</span> Aviso Legal e Identificación del Responsable</h2>
+
+      <p>En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de los siguientes datos identificativos:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Campo</th><th>Datos</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Denominación social</strong></td><td>[Insertar Razón Social o Nombre Completo del Autónomo]</td></tr>
+            <tr><td><strong>NIF/CIF</strong></td><td>[Insertar NIF/CIF]</td></tr>
+            <tr><td><strong>Domicilio social</strong></td><td>Calle Nogal, nº 3 · 28794 Guadalix de la Sierra, Madrid</td></tr>
+            <tr><td><strong>Teléfono</strong></td><td>91 847 55 74</td></tr>
+            <tr><td><strong>Correo electrónico</strong></td><td>guadalixclinicadental@gmail.com</td></tr>
+            <tr><td><strong>Sitio web</strong></td><td>https://clinicadentalguadalix.com</td></tr>
+            <tr><td><strong>DPD (Delegado de Protección de Datos)</strong></td><td>[Insertar correo DPD — obligatorio por tratamiento de datos de salud]</td></tr>
+            <tr><td><strong>Número de colegiado</strong></td><td>[Insertar número colegiado COEM]</td></tr>
+            <tr><td><strong>Colegio profesional</strong></td><td>Ilustre Colegio Oficial de Odontólogos y Estomatólogos de la I Región (COEM, Madrid)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Condiciones de uso del sitio web</h3>
+      <p>El acceso y uso del sitio web <strong>clinicadentalguadalix.com</strong> atribuye la condición de usuario e implica la aceptación de las presentes condiciones. El titular se reserva el derecho a modificar estas condiciones en cualquier momento, siendo efectiva la modificación desde su publicación en el sitio web.</p>
+      <p>Los contenidos del sitio web tienen finalidad meramente informativa y en ningún caso constituyen asesoramiento médico individualizado. Ante cualquier síntoma o duda de salud, el usuario debe acudir a un profesional sanitario.</p>
+    </section>
+
+    <!-- 2. DATOS RECOPILADOS -->
+    <section id="datos-recopilados">
+      <h2><span class="section-num">2</span> Datos personales que recopilamos</h2>
+
+      <h3>2.1 Formulario de contacto / solicitud de cita</h3>
+      <p>Cuando rellenas el formulario de contacto, recogemos los siguientes datos:</p>
+      <ul>
+        <li><strong>Nombre y apellidos</strong> (obligatorio)</li>
+        <li><strong>Teléfono</strong> (obligatorio)</li>
+        <li>Correo electrónico (opcional)</li>
+        <li>Tratamiento de interés (opcional)</li>
+        <li>Mensaje o consulta (opcional)</li>
+        <li>Fecha y hora del envío, origen (web) y consentimiento registrado</li>
+      </ul>
+
+      <h3>2.2 Datos de navegación (cookies y analítica)</h3>
+      <p>Si el usuario acepta las cookies analíticas, Google Analytics 4 recoge datos de navegación anonimizados: páginas visitadas, tiempo de sesión, dispositivo, sistema operativo, y país de origen. La IP se anonimiza antes de cualquier tratamiento. Más información en la <a href="cookies.html">Política de Cookies</a>.</p>
+
+      <h3>2.3 Pacientes que acuden a la clínica</h3>
+      <p>Los datos de salud (historial clínico, radiografías, diagnósticos y tratamientos) se recogen y tratan conforme a la Ley 41/2002 de Autonomía del Paciente y la normativa sanitaria vigente. Estos datos se recogen mediante consentimiento expreso del paciente o su representante legal, y se custodian en sistemas seguros con acceso exclusivo para el personal sanitario autorizado.</p>
+    </section>
+
+    <!-- 3. FINALIDADES Y BASE LEGAL -->
+    <section id="finalidades">
+      <h2><span class="section-num">3</span> Finalidades y base legal del tratamiento</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Finalidad</th><th>Base legal (Art. 6 RGPD)</th><th>Datos implicados</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Gestión de solicitudes de cita y consultas</td>
+              <td>Art. 6.1.b — Ejecución de contrato / medidas precontractuales</td>
+              <td>Nombre, teléfono, email, mensaje</td>
+            </tr>
+            <tr>
+              <td>Prestación de servicios odontológicos (historia clínica)</td>
+              <td>Art. 9.2.h RGPD — Asistencia sanitaria; Ley 41/2002</td>
+              <td>Datos de salud, radiografías, diagnósticos</td>
+            </tr>
+            <tr>
+              <td>Envío de comunicaciones sobre la clínica (si se autoriza)</td>
+              <td>Art. 6.1.a — Consentimiento del interesado</td>
+              <td>Email, nombre</td>
+            </tr>
+            <tr>
+              <td>Analítica web (mejora del sitio)</td>
+              <td>Art. 6.1.a — Consentimiento del interesado (banner de cookies)</td>
+              <td>Datos de navegación anonimizados</td>
+            </tr>
+            <tr>
+              <td>Cumplimiento de obligaciones legales (facturación, seguridad social)</td>
+              <td>Art. 6.1.c — Obligación legal</td>
+              <td>Nombre, NIF, datos de facturación</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="info-box">
+        <strong>⚕️ Tratamiento de datos especiales de salud</strong>
+        Los datos clínicos (historial, diagnóstico, radiografías) son datos de categoría especial en virtud del Art. 9 RGPD. Se tratan exclusivamente con la finalidad de prestar asistencia sanitaria y se recogen con consentimiento expreso del paciente o tutor legal. El acceso está restringido al personal sanitario autorizado.
+      </div>
+    </section>
+
+    <!-- 4. CONSERVACIÓN -->
+    <section id="conservacion">
+      <h2><span class="section-num">4</span> Plazo de conservación de los datos</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Tipo de datos</th><th>Plazo de conservación</th><th>Normativa aplicable</th></tr></thead>
+          <tbody>
+            <tr><td>Historia clínica odontológica</td><td>Mínimo 5 años desde el alta (algunos registros 15 años)</td><td>Ley 41/2002; legislación sanitaria de la CM de Madrid</td></tr>
+            <tr><td>Datos de contacto / solicitudes de cita</td><td>3 años desde la última comunicación</td><td>RGPD art. 5.1.e</td></tr>
+            <tr><td>Datos de facturación</td><td>6 años</td><td>Código de Comercio, Ley del IVA</td></tr>
+            <tr><td>Datos de navegación web (analítica)</td><td>26 meses (Google Analytics 4)</td><td>Guía AEPD cookies 2023</td></tr>
+            <tr><td>Registros de consentimiento de cookies</td><td>1 año</td><td>AEPD</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Transcurridos los plazos anteriores, los datos serán suprimidos o anonimizados de forma segura.</p>
+    </section>
+
+    <!-- 5. DESTINATARIOS -->
+    <section id="destinatarios">
+      <h2><span class="section-num">5</span> Destinatarios y transferencias internacionales</h2>
+
+      <p>Con carácter general, los datos personales <strong>no se ceden a terceros</strong> salvo:</p>
+      <ul>
+        <li><strong>Obligación legal:</strong> organismos públicos (Hacienda, Seguridad Social, autoridades sanitarias) cuando la normativa así lo exija.</li>
+        <li><strong>Encargados del tratamiento:</strong> proveedores de servicios que actúan por cuenta de la clínica bajo contrato de encargado (Art. 28 RGPD).</li>
+      </ul>
+
+      <h3>Encargados del tratamiento</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Proveedor</th><th>Servicio</th><th>País / Garantías</th></tr></thead>
+          <tbody>
+            <tr><td>Laboratorio de prótesis dental (subcontratado)</td><td>Elaboración de prótesis, coronas y ortodoncia a medida</td><td>España — contrato de encargado Art. 28 RGPD</td></tr>
+            <tr><td>Mutuas / aseguradoras del paciente (si aplica)</td><td>Facturación y cobertura de tratamientos</td><td>España — contrato de encargado Art. 28 RGPD</td></tr>
+            <tr><td>Software de gestión clínica (en la nube)</td><td>Historia clínica digital, agenda y facturación</td><td>UE — contrato de encargado Art. 28 RGPD</td></tr>
+            <tr><td>n8n (automatización de formulario web)</td><td>Recepción y enrutamiento de solicitudes de cita online</td><td>Hostinger — servidor UE. Los datos de cita se procesan y eliminan automáticamente tras su envío a la clínica.</td></tr>
+            <tr><td>Google LLC (Google Analytics 4)</td><td>Analítica web anonimizada</td><td>EE.UU. — Cláusulas Contractuales Estándar (SCCs). IP anonimizada. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política Google</a></td></tr>
+            <tr><td>Proveedor de hosting web</td><td>Alojamiento del sitio web</td><td>UE</td></tr>
+            <tr><td>Google Workspace / Gmail</td><td>Comunicaciones por correo electrónico con pacientes</td><td>EE.UU. — SCCs. <a href="https://workspace.google.com/terms/dpa_terms.html" target="_blank" rel="noopener">DPA Google Workspace</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>No se realizan transferencias internacionales de datos clínicos fuera del Espacio Económico Europeo.</p>
+    </section>
+
+    <!-- 6. DERECHOS -->
+    <section id="derechos">
+      <h2><span class="section-num">6</span> Tus derechos como interesado (RGPD)</h2>
+
+      <p>En virtud del Reglamento (UE) 2016/679 y la LO 3/2018 (LOPDGDD), tienes los siguientes derechos:</p>
+
+      <div class="rights-grid">
+        <div class="right-card">
+          <strong>📋 Acceso (Art. 15)</strong>
+          <p>Obtener confirmación de si tratamos tus datos y recibir una copia de los mismos.</p>
+        </div>
+        <div class="right-card">
+          <strong>✏️ Rectificación (Art. 16)</strong>
+          <p>Solicitar la corrección de datos inexactos o incompletos.</p>
+        </div>
+        <div class="right-card">
+          <strong>🗑️ Supresión (Art. 17)</strong>
+          <p>Solicitar la eliminación de tus datos cuando ya no sean necesarios para la finalidad para la que fueron recogidos.</p>
+        </div>
+        <div class="right-card">
+          <strong>⏸️ Limitación (Art. 18)</strong>
+          <p>Solicitar que se restrinja el tratamiento de tus datos en determinadas circunstancias.</p>
+        </div>
+        <div class="right-card">
+          <strong>🚫 Oposición (Art. 21)</strong>
+          <p>Oponerte al tratamiento de tus datos por motivos relacionados con tu situación particular.</p>
+        </div>
+        <div class="right-card">
+          <strong>📤 Portabilidad (Art. 20)</strong>
+          <p>Recibir tus datos en formato estructurado y legible por máquina para transmitirlos a otro responsable.</p>
+        </div>
+      </div>
+
+      <div class="info-box" style="margin-top:24px;">
+        <strong>📝 Cómo ejercer tus derechos</strong>
+        Puedes ejercer cualquiera de estos derechos enviando un escrito a <strong>info@clinicadentalguadalix.com</strong> o mediante correo postal a nuestra dirección, indicando el derecho que deseas ejercer y adjuntando una copia de tu DNI o documento identificativo equivalente. Responderemos en el plazo máximo de <strong>un mes</strong> (ampliable a tres si la complejidad lo requiere).
+      </div>
+
+      <p>Si consideras que el tratamiento de tus datos vulnera la normativa, tienes derecho a presentar una reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong>: <a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a> · C/ Jorge Juan, 6, 28001 Madrid.</p>
+    </section>
+
+    <!-- 7. SEGURIDAD -->
+    <section id="seguridad">
+      <h2><span class="section-num">7</span> Medidas de seguridad</h2>
+
+      <p>La clínica ha implementado las medidas técnicas y organizativas apropiadas para proteger los datos personales frente a accesos no autorizados, pérdida, alteración o divulgación, conforme al Art. 32 RGPD:</p>
+      <ul>
+        <li>Protocolo HTTPS con certificado SSL/TLS en el sitio web.</li>
+        <li>Acceso restringido a los datos mediante credenciales seguras.</li>
+        <li>Copias de seguridad periódicas y cifradas.</li>
+        <li>Sistemas de gestión clínica con control de acceso por roles.</li>
+        <li>Formación y concienciación del personal en protección de datos.</li>
+        <li>Contratos de encargado del tratamiento con todos los proveedores.</li>
+      </ul>
+
+      <p>En caso de brecha de seguridad que pueda afectar a los derechos y libertades de los interesados, la clínica notificará a la AEPD en el plazo de 72 horas (Art. 33 RGPD) y a los afectados cuando sea necesario (Art. 34 RGPD).</p>
+    </section>
+
+    <!-- 8. MENORES -->
+    <section id="menores">
+      <h2><span class="section-num">8</span> Menores de edad</h2>
+
+      <p>El sitio web no está dirigido a menores de 14 años. En virtud del Art. 8 RGPD y el Art. 7 LOPDGDD, el tratamiento de datos de menores de 14 años requiere el consentimiento del titular de la patria potestad o tutela.</p>
+      <p>Para los pacientes menores de edad que acuden a la clínica, la historia clínica y el consentimiento informado se gestionan conforme a la Ley 41/2002 de Autonomía del Paciente, con participación del menor según su grado de madurez.</p>
+    </section>
+
+    <!-- 9. CONTACTO -->
+    <section id="contacto-dpd">
+      <h2><span class="section-num">9</span> Contacto con el Responsable</h2>
+
+      <div class="contact-block">
+        <h3>Clínica Dental Guadalix</h3>
+        <p>Responsable del Tratamiento de Datos</p>
+        <p>📧 <a href="mailto:guadalixclinicadental@gmail.com">guadalixclinicadental@gmail.com</a></p>
+        <p>📞 <a href="tel:+34918475574">91 847 55 74</a></p>
+        <p>📍 Calle Nogal, nº 3 · 28794 Guadalix de la Sierra, Madrid</p>
+        <p style="margin-top:12px;font-size:13px;color:rgba(255,255,255,0.65);">DPD: [Insertar correo del Delegado de Protección de Datos]</p>
+      </div>
+
+      <p style="font-size:13px;color:var(--text-muted);">
+        Esta política de privacidad puede ser actualizada para adaptarse a cambios legislativos o en los servicios de la clínica. La versión vigente siempre estará disponible en esta página con la fecha de última actualización indicada en el encabezado.
+      </p>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2025 Clínica Dental Guadalix ·
+      <a href="index.html">Inicio</a> ·
+      <a href="cookies.html">Política de Cookies</a> ·
+      <a href="aviso-legal.html">Aviso Legal</a> ·
+      <a href="mailto:guadalixclinicadental@gmail.com">Contacto</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

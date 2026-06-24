@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Endodoncia y Odontología Conservadora | Clínica Dental Guadalix</title>
+  <meta name="description" content="Tratamiento de conductos y odontología conservadora en Guadalix. Salva tu diente con especialistas.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://clinicadentalguadalix.com/trat-endodoncia">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+  .inner-hero{background:linear-gradient(135deg,var(--primary) 0%,#0d3a8c 60%,#1a2e6e 100%);padding:140px 0 80px;text-align:center;position:relative;overflow:hidden;}
+  .inner-hero::before{content:'';position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400"><circle cx="700" cy="50" r="250" fill="%232176FF" opacity=".06"/></svg>');}
+  .inner-hero h1{font-size:clamp(28px,4vw,48px);font-weight:800;color:var(--white);margin-bottom:12px;position:relative;z-index:1;}
+  .inner-hero h1 span{color:#7EB3FF;}
+  .inner-hero p{font-size:17px;color:rgba(255,255,255,.75);max-width:580px;margin:0 auto;position:relative;z-index:1;}
+  .breadcrumb{display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;color:rgba(255,255,255,.55);position:relative;z-index:1;margin-bottom:20px;}
+  .breadcrumb a{color:rgba(255,255,255,.7);text-decoration:none;}
+
+  /* Hero image full-width */
+  .trat-hero-img {
+    width:100%; max-height:480px; object-fit:cover; display:block;
+  }
+
+  /* Content section */
+  .trat-section{padding:64px 0;}
+  .back-link{display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-size:14px;font-weight:600;text-decoration:none;margin-bottom:32px;padding:10px 20px;background:var(--surface);border-radius:50px;border:1px solid rgba(33,118,255,.2);transition:var(--transition);}
+  .back-link:hover{background:#dce8f8;color:var(--primary);}
+  .trat-body h1{font-size:clamp(24px,3.5vw,36px);font-weight:800;color:var(--text-dark);margin-bottom:24px;}
+  .trat-body p{font-size:15px;line-height:1.8;color:var(--text-body);margin-bottom:16px;}
+  .trat-body h3{font-size:18px;font-weight:700;color:var(--primary);margin:28px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--surface);}
+  .trat-body ul{padding-left:22px;margin-bottom:16px;}
+  .trat-body ul li{font-size:15px;color:var(--text-body);margin-bottom:8px;line-height:1.65;}
+  .trat-body strong{color:var(--text-dark);}
+  .trat-body blockquote{border-left:4px solid var(--accent);padding:14px 22px;background:var(--surface);border-radius:0 12px 12px 0;font-style:italic;color:var(--text-body);margin:24px 0;font-size:15px;line-height:1.7;}
+
+  .faq-item{background:var(--white);border:1px solid rgba(10,36,99,.07);border-radius:12px;padding:20px 24px;margin-bottom:12px;box-shadow:var(--shadow-card);}
+  .faq-q{font-weight:700;color:var(--text-dark);font-size:15px;margin-bottom:8px;}
+  .faq-a{font-size:14px;color:var(--text-body);line-height:1.65;}
+
+  .cta-box{background:var(--surface);border-radius:16px;padding:28px 32px;margin-top:40px;border-left:4px solid var(--success);}
+  .cta-box p{margin:0;font-size:15px;}
+  .cta-box strong{color:var(--text-dark);display:block;margin-bottom:8px;font-size:16px;}
+
+  @media(max-width:768px){.trat-hero-img{max-height:260px;}}
+</style>
+</head>
+<body>
+<nav id="navbar" role="navigation">
+  <div class="container"><div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg viewBox="0 0 32 32" fill="none" width="32" height="32" stroke="currentColor" stroke-width="2"><path d="M16 3C16 3 10 7 8 13C6 19 10 23 13 23C14.5 23 15.5 22 16 21C16.5 22 17.5 23 19 23C22 23 26 19 24 13C22 7 16 3 16 3Z" fill="rgba(33,118,255,0.15)"/><path d="M16 21V29" stroke-linecap="round"/></svg>
+      Clínica Dental <span>Guadalix</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
+      <li><a href="quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
+      <li><a href="tratamientos.html" class="nav-link">Tratamientos</a></li>
+      <li><a href="index.html#horarios" class="nav-link">Horarios</a></li>
+      <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+    </ul>
+    <a href="index.html#contacto" class="btn btn-primary nav-cta">Reservar Cita</a>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div></div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <button class="close-menu" id="close-menu">✕</button>
+  <a href="index.html#servicios" class="nav-link" onclick="closeMobileMenu()">Servicios</a>
+  <a href="quienes-somos.html" class="nav-link" onclick="closeMobileMenu()">Quiénes Somos</a>
+  <a href="tratamientos.html" class="nav-link" onclick="closeMobileMenu()">Tratamientos</a>
+  <a href="index.html#horarios" class="nav-link" onclick="closeMobileMenu()">Horarios</a>
+  <a href="index.html#contacto" class="nav-link" onclick="closeMobileMenu()">Contacto</a>
+  <a href="index.html#contacto" class="btn btn-primary" onclick="closeMobileMenu()">Reservar Cita</a>
+</div>
+
+<!-- Breadcrumb hero -->
+<section class="inner-hero" style="padding:110px 0 50px;">
+  <div class="container">
+    <nav class="breadcrumb"><a href="index.html">Inicio</a><span>›</span><a href="tratamientos.html">Tratamientos</a><span>›</span><span style="color:rgba(255,255,255,.9)">Endodoncia y Odontología Conservadora</span></nav>
+    <h1><span>Endodoncia y Odontología Conservadora</span></h1>
+    <p>Tratamiento de conductos para salvar dientes dañados por infección, caries o traumatismos.</p>
+  </div>
+</section>
+
+<!-- Imagen grande -->
+<img src="img/trat_endodoncia_grande.jpg" alt="Endodoncia y Odontología Conservadora - Clínica Dental Guadalix" class="trat-hero-img" loading="eager">
+
+<!-- Contenido -->
+<section class="trat-section">
+  <div class="container" style="max-width:860px;">
+    <a href="tratamientos.html" class="back-link fade-in">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 8H3M7 4L3 8l4 4"/></svg>
+      Volver a Tratamientos
+    </a>
+    <div class="trat-body fade-in">
+      <h1>Endodoncia y Odontología Conservadora</h1>
+      <h3>¿Qué es la Endodoncia?</h3>
+      <p>La Endodoncia es la <strong>eliminación del paquete vasculo-nervioso dental</strong> y su sustitución mediante un material biocompatible, cuando —a consecuencia de un problema infeccioso, caries o traumático— se ha afectado irreversiblemente.</p>
+      <p>Es quizás una de las disciplinas odontológicas de <strong>mayor complejidad en su ejecución</strong>. Por ello, realizarla mediante un especialista aumenta en gran medida el porcentaje de éxito del diente tratado.</p>
+      <h3>Odontología Conservadora</h3>
+      <p>Con el desarrollo de las <strong>técnicas adhesivas</strong>, la Odontología Conservadora permite devolver función y estética a las piezas dentarias con caries, restauraciones antiguas filtradas o fracturadas y fracturas dentarias, siguiendo los principios <strong>BIOMIMÉTICOS</strong>.</p>
+      <h3>¿Cuándo es necesaria una endodoncia?</h3>
+      <ul>
+        <li>Caries profunda que ha llegado a la pulpa dental</li>
+        <li>Infección o absceso dental</li>
+        <li>Traumatismo dental con afectación pulpar</li>
+        <li>Sensibilidad severa que no remite con otros tratamientos</li>
+      </ul>
+      <div class="cta-box">
+        <strong>¿Tienes preguntas sobre este tratamiento?</strong>
+        <p>Llámanos al <a href="tel:+34918475574" style="color:var(--accent);font-weight:600;">91 847 55 74</a> o <a href="index.html#contacto" style="color:var(--accent);font-weight:600;">solicita tu primera visita gratuita</a>. Sin compromiso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band"><div class="container"><h2>Primera visita gratuita y sin compromiso</h2><p>Diagnóstico completo y plan de tratamiento personalizado.</p><a href="index.html#contacto" class="btn-white">Reservar ahora →</a></div></section>
+<footer role="contentinfo"><div class="container"><div class="footer-grid"><div class="footer-brand"><div class="footer-logo"><svg width="24" height="24" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3C16 3 10 7 8 13C6 19 10 23 13 23C14.5 23 15.5 22 16 21C16.5 22 17.5 23 19 23C22 23 26 19 24 13C22 7 16 3 16 3Z"/><path d="M16 21V29"/></svg>Clínica Dental <span>Guadalix</span></div><p>Odontología integral en Guadalix de la Sierra, Madrid.</p></div><div class="footer-col"><h4>Tratamientos</h4><ul><li><a href="trat-ortodoncia.html">Ortodoncia</a></li><li><a href="trat-cirugia-implantes.html">Implantes</a></li><li><a href="trat-estetica-dental.html">Estética Dental</a></li><li><a href="trat-endodoncia.html">Endodoncia</a></li><li><a href="trat-periodoncia.html">Periodoncia</a></li><li><a href="trat-odontopediatria.html">Odontopediatría</a></li></ul></div><div class="footer-col"><h4>Clínica</h4><ul><li><a href="quienes-somos.html">Quiénes Somos</a></li><li><a href="index.html#horarios">Horarios</a></li><li><a href="index.html#contacto">Contacto</a></li></ul></div><div class="footer-col"><h4>Contacto</h4><ul><li><a href="tel:+34918475574">📞 91 847 55 74</a></li><li><a href="mailto:guadalixclinicadental@gmail.com">✉️ guadalixclinicadental@gmail.com</a></li><li><a href="https://wa.me/34918475574" target="_blank" rel="noopener">💬 WhatsApp</a></li><li>📍 C/ Nogal, nº 3 · Guadalix de la Sierra</li></ul></div></div><div class="footer-bottom"><span>© 2025 Clínica Dental Guadalix</span><div class="footer-legal-links"><a href="privacidad.html">Privacidad</a><a href="cookies.html">Cookies</a><a href="aviso-legal.html">Aviso Legal</a></div></div></div></footer>
+<a href="https://wa.me/34918475574" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<script>
+const navbar=document.getElementById('navbar');
+window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>50),{passive:true});
+navbar.classList.add('scrolled');
+document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobile-menu').classList.add('open'));
+document.getElementById('close-menu').addEventListener('click',closeMobileMenu);
+function closeMobileMenu(){document.getElementById('mobile-menu').classList.remove('open');}
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);}}),{threshold:0.1});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
