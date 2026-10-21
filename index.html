@@ -604,5 +604,16 @@
 
 <script src="script.js"></script>
 
+<script>
+(function () {
+  try {
+    if (location.hostname === 'localhost' || localStorage.getItem('yo') === '1') return;
+    var d = { page: location.pathname, ref: document.referrer, src: location.search, ua: navigator.userAgent };
+    var b = new Blob([JSON.stringify(d)], { type: 'application/json' });
+    navigator.sendBeacon('https://n8n-oxgm.srv1537739.hstgr.cloud/webhook/visita-landing', b);
+  } catch (e) {}
+})();
+</script>
+
 </body>
 </html>
