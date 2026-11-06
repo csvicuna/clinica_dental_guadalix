@@ -30,7 +30,36 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
   </script>
-<script src="…/crm-tracker.js" data-token="1ee301b63312290e1249496b07f69e67" defer></script>
+
+<!-- crm-tracker -->
+<script>
+(function () {
+  var TOKEN = "1ee301b63312290e1249496b07f69e67";
+  var ENDPOINT = "https://kwpbxbgsxmgobxzfgxuh.supabase.co/functions/v1/track";
+  try {
+    if (/[?&]crm_ignore=1/.test(location.search)) localStorage.setItem("crm_ignore", "1");
+    if (/[?&]crm_ignore=0/.test(location.search)) localStorage.removeItem("crm_ignore");
+    if (localStorage.getItem("crm_ignore") === "1") return;
+    if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) return;
+    var vid = localStorage.getItem("crm_vid");
+    if (!vid) { vid = Math.random().toString(36).slice(2) + Date.now().toString(36); localStorage.setItem("crm_vid", vid); }
+    function send(evento, detalle) {
+      var body = JSON.stringify({ token: TOKEN, evento: evento, visitor: vid, detalle: detalle || location.pathname });
+      if (navigator.sendBeacon) navigator.sendBeacon(ENDPOINT, new Blob([body], { type: "text/plain" }));
+      else fetch(ENDPOINT, { method: "POST", body: body, keepalive: true });
+    }
+    send("visita");
+    document.addEventListener("click", function (e) {
+      var a = e.target && e.target.closest && e.target.closest("a[href]");
+      if (!a) return;
+      var h = a.getAttribute("href") || "";
+      if (/wa\.me|api\.whatsapp\.com/.test(h)) send("waba", "Clic en WhatsApp");
+      else if (/^tel:/.test(h)) send("zadarma", "Clic en teléfono " + h.slice(4));
+    });
+  } catch (_) {}
+})();
+</script>
+  
   <!-- Schema.org / Datos estructurados -->
   <script type="application/ld+json">
   {
