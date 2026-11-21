@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <title>Clínica Dental Guadalix | Dentista en Guadalix de la Sierra, Madrid</title>
   <meta name="description" content="Clínica Dental Guadalix ofrece odontología integral personalizada: ortodoncia, implantes, blanqueamiento, endodoncia y más. Reserva tu cita online en Guadalix de la Sierra, Madrid.">
   <meta name="keywords" content="clínica dental Guadalix, dentista Guadalix de la Sierra, ortodoncia Guadalix, implantes dentales Madrid Norte, dentista Guadalix">
@@ -99,7 +102,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20261121b">
 </head>
 <body>
 
@@ -118,13 +121,13 @@
 <!-- ── MOBILE MENU ── -->
 <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menú móvil">
   <button class="close-menu" id="close-menu" aria-label="Cerrar menú">✕</button>
+  <a href="#quienes-somos" class="nav-link" onclick="closeMobileMenu()">Quiénes Somos</a>
   <a href="#servicios" class="nav-link" onclick="closeMobileMenu()">Servicios</a>
-  <a href="quienes-somos.html" class="nav-link" onclick="closeMobileMenu()">Quiénes Somos</a>
-  <a href="tratamientos.html" class="nav-link" onclick="closeMobileMenu()">Tratamientos</a>
+  <a href="#financiacion" class="nav-link" onclick="closeMobileMenu()">Financiación</a>
   <a href="#horarios" class="nav-link" onclick="closeMobileMenu()">Horarios</a>
   <a href="#testimonios" class="nav-link" onclick="closeMobileMenu()">Testimonios</a>
   <a href="#contacto" class="nav-link" onclick="closeMobileMenu()">Contacto</a>
-  <a href="#contacto" class="btn btn-primary" onclick="closeMobileMenu()">Reservar Cita</a>
+  <a href="#contacto" class="btn btn-primary" onclick="closeMobileMenu()">Cita por Calendario</a>
 </div>
 
 <!-- ── NAVBAR ── -->
@@ -132,21 +135,18 @@
   <div class="container">
     <div class="nav-inner">
       <a href="#" class="nav-logo" aria-label="Inicio Clínica Dental Guadalix">
-        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M16 3C16 3 10 7 8 13C6 19 10 23 13 23C14.5 23 15.5 22 16 21C16.5 22 17.5 23 19 23C22 23 26 19 24 13C22 7 16 3 16 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="rgba(33,118,255,0.15)"/>
-          <path d="M16 21V29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-        Clínica Dental <span>Guadalix</span>
+        <img src="img/logo-blanco.svg" alt="Clínica Dental Guadalix" class="logo-img logo-on-dark" width="238" height="32">
+        <img src="img/logo.svg" alt="Clínica Dental Guadalix" class="logo-img logo-on-light" width="238" height="32">
       </a>
       <ul class="nav-links">
+        <li><a href="#quienes-somos" class="nav-link">Quiénes Somos</a></li>
         <li><a href="#servicios" class="nav-link">Servicios</a></li>
-        <li><a href="quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
-        <li><a href="tratamientos.html" class="nav-link">Tratamientos</a></li>
+        <li><a href="#financiacion" class="nav-link">Financiación</a></li>
         <li><a href="#horarios" class="nav-link">Horarios</a></li>
         <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
         <li><a href="#contacto" class="nav-link">Contacto</a></li>
       </ul>
-      <a href="#contacto" class="btn btn-primary nav-cta">Reservar Cita</a>
+      <a href="#contacto" class="btn btn-primary nav-cta">Cita por Calendario</a>
       <div class="hamburger" id="hamburger" role="button" aria-label="Abrir menú" tabindex="0">
         <span></span><span></span><span></span>
       </div>
@@ -172,7 +172,7 @@
         <div class="hero-actions">
           <a href="#contacto" class="btn btn-primary">
             <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-            Pedir cita
+            Cita por Calendario
           </a>
           <a href="#servicios" class="btn btn-outline">Ver tratamientos</a>
         </div>
@@ -212,6 +212,287 @@
   </div>
 </section>
 
+<!-- ── QUIÉNES SOMOS ── -->
+<div id="quienes-somos">
+<!-- ── HISTORIA E INSTALACIONES ── -->
+<section class="intro-section" id="historia" aria-labelledby="intro-title">
+  <div class="container">
+    <div class="intro-inner">
+      <div class="intro-text fade-in">
+        <span class="label-tag">Nuestra historia · Nuestras instalaciones</span>
+        <h2 id="intro-title">Una clínica creada con un propósito claro</h2>
+        <p>Guadalix Clínica Dental nace con la vocación de ofrecer a los pacientes una atención odontológica especializada y multidisciplinar en el entorno de la Sierra Norte de Madrid.</p>
+        <p>Contamos con un local completamente reformado, accesible para personas con movilidad reducida, dotado de toda la maquinaria e instrumental necesario para el diagnóstico, tratamiento, desinfección y esterilización con los más altos estándares de calidad.</p>
+        <p>Moderno e innovador, está pensado para que los pacientes se sientan cómodos y relajados en un entorno que les inspire confianza desde el primer momento.</p>
+      </div>
+      <div class="intro-gallery fade-in" id="instalaciones">
+        <div class="gallery-item">
+        <img src="img/clinica_recepcion1.jpg" alt="Recepción y sala de espera de Clínica Dental Guadalix" loading="lazy">
+        <div class="gallery-caption">Recepción y sala de espera</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/clinica_recepcion2.jpg" alt="Pasillo y acceso de Clínica Dental Guadalix" loading="lazy">
+        <div class="gallery-caption">Acceso y pasillos</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/clinica_gabinete1.jpg" alt="Gabinete dental con sillón y equipamiento" loading="lazy">
+        <div class="gallery-caption">Gabinete de tratamiento</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/clinica_gabinete2.jpg" alt="Segundo gabinete dental" loading="lazy">
+        <div class="gallery-caption">Segundo gabinete</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/clinica_rayos1.jpg" alt="Sala de radiología panorámica" loading="lazy">
+        <div class="gallery-caption">Sala de radiodiagnóstico</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/clinica_rayos2.jpg" alt="Equipo de radiología digital y ordenador con radiografía" loading="lazy">
+        <div class="gallery-caption">Diagnóstico por imagen digital</div>
+      </div>
+      </div>
+    </div>
+    <div class="intro-pills-row fade-in">
+      <span class="pill"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 7 6 11 12 3"/></svg> Accesible para personas con movilidad reducida</span>
+          <span class="pill"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 7 6 11 12 3"/></svg> Equipamiento de última generación</span>
+          <span class="pill"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 7 6 11 12 3"/></svg> Protocolos estrictos de esterilización</span>
+          <span class="pill"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 7 6 11 12 3"/></svg> Equipo multidisciplinar especializado</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── POR QUÉ ELEGIRNOS ── -->
+<section id="nosotros" class="section section-alt" aria-labelledby="nosotros-title">
+  <div class="container">
+    <div class="why-inner">
+      <div class="fade-in">
+        <span class="label-tag">Por Qué Elegirnos</span>
+        <h2 class="section-title" id="nosotros-title">Más de 15 años cuidando sonrisas en Guadalix</h2>
+        <p class="section-sub">Somos una clínica de referencia en la Sierra Norte de Madrid, comprometida con la excelencia clínica y el trato humano.</p>
+        <ul class="why-list">
+          <li class="why-item">
+            <div class="why-check"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="white" stroke-width="2"><polyline points="2 7 6 11 12 3"/></svg></div>
+            <div><strong>Tecnología de última generación</strong><p>Radiografía digital, escáner intraoral 3D y blanqueamiento LED en clínica.</p></div>
+          </li>
+          <li class="why-item">
+            <div class="why-check"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="white" stroke-width="2"><polyline points="2 7 6 11 12 3"/></svg></div>
+            <div><strong>Equipo especializado y empático</strong><p>Cada profesional cuenta con formación continua y trato paciente y cercano.</p></div>
+          </li>
+          <li class="why-item">
+            <div class="why-check"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="white" stroke-width="2"><polyline points="2 7 6 11 12 3"/></svg></div>
+            <div><strong>Presupuesto sin compromiso</strong><p>Primera visita de diagnóstico gratuita y financiación flexible sin intereses.</p></div>
+          </li>
+          <li class="why-item">
+            <div class="why-check"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="white" stroke-width="2"><polyline points="2 7 6 11 12 3"/></svg></div>
+            <div><strong>Clínica familiar de proximidad</strong><p>Llevamos tratando a las familias de Guadalix y la comarca durante generaciones.</p></div>
+          </li>
+          <li class="why-item">
+            <div class="why-check"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="white" stroke-width="2"><polyline points="2 7 6 11 12 3"/></svg></div>
+            <div><strong>Estrictos protocolos de esterilización</strong><p>Cumplimos con todos los requisitos sanitarios del Ministerio de Sanidad.</p></div>
+          </li>
+        </ul>
+      </div>
+      <div class="fade-in">
+        <img
+          src="img/clinica_cercania.jpg"
+          alt="Cercanía desde el primer momento: recepción de Clínica Dental Guadalix"
+          class="why-img"
+          width="1080" height="1446"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EQUIPO MÉDICO ── -->
+<section class="team-section" id="equipo" aria-labelledby="equipo-title">
+  <div class="container">
+    <div class="team-section-header fade-in">
+      <span class="label-tag">Quiénes somos</span>
+      <h2 id="equipo-title">Equipo Médico</h2>
+      <p>Directoras médicas, especialistas y equipo de apoyo: quién es cada profesional y qué hace en la clínica.</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="doctor-card fade-in" id="directoras">
+      <div class="doctor-photo-wrap">
+        <img src="img/equipo_silvia.jpg" alt="Dra. Silvia Llamas Martínez" class="doctor-photo" loading="lazy">
+      </div>
+      <div class="doctor-info">
+        <span class="doctor-role">Directora Médica · Medicina y Cirugía Bucofacial</span>
+        <h3 class="doctor-name">Dra. Silvia Llamas Martínez</h3>
+        <p class="doctor-colegiado">Nº de Colegiado: 28005793</p>
+        <ul class="doctor-bio">
+          <li>Doctora por la Universidad Complutense de Madrid (UCM)</li>
+          <li>Especialista en Medicina y Cirugía Bucofacial</li>
+          <li>Profesora Colaboradora Honorífica de la UCM — Dpto. de Medicina y Cirugía</li>
+          <li>Profesora Contratada Doctora de la Universidad Alfonso X el Sabio (UAX)</li>
+          <li>Profesora del Curso de Formación Continua «Bases Prácticas en Medicina Oral» — Unidad de Formación Continua de la UCM</li>
+          <li>13 artículos publicados en revistas nacionales e internacionales</li>
+          <li>Más de 12 cursos impartidos y más de 50 comunicaciones y ponencias en Congresos Científicos Nacionales e Internacionales</li>
+        </ul>
+      </div>
+    </div>
+
+      <div class="doctor-card fade-in">
+      <div class="doctor-photo-wrap">
+        <img src="img/equipo_paloma.jpg" alt="Dra. Paloma Cancela Rodríguez" class="doctor-photo photo-paloma" loading="lazy">
+      </div>
+      <div class="doctor-info">
+        <span class="doctor-role">Directora Médica · Medicina y Cirugía Bucofacial</span>
+        <h3 class="doctor-name">Dra. Paloma Cancela Rodríguez</h3>
+        <p class="doctor-colegiado">Nº de Colegiado: 28005753</p>
+        <ul class="doctor-bio">
+          <li>Doctora por la Universidad Complutense de Madrid (UCM)</li>
+          <li>Especialista en Medicina y Cirugía Bucofacial</li>
+          <li>Profesora Colaboradora Honorífica de la UCM — Dpto. de Medicina y Cirugía (2005–2008)</li>
+          <li>19 artículos publicados en revistas nacionales e internacionales</li>
+          <li>Más de 10 cursos impartidos y más de 20 comunicaciones y ponencias en Congresos Científicos Nacionales e Internacionales</li>
+        </ul>
+      </div>
+    </div>
+
+      <div class="doctor-card fade-in" id="ortodoncista">
+      <div class="doctor-photo-wrap" style="background:#f0f4fc;">
+        <img src="img/equipo_ortodoncia.jpg" alt="Ortodoncia - Dr. Daniel Horta Poyal" class="doctor-photo" loading="lazy" style="object-position:center;">
+      </div>
+      <div class="doctor-info">
+        <span class="doctor-role">Especialista en Ortodoncia</span>
+        <h3 class="doctor-name">Dr. Daniel Horta Poyal</h3>
+        <p class="doctor-colegiado">Licenciado en Odontología por la UCM</p>
+        <ul class="doctor-bio">
+          <li>Licenciado en Odontología por la Universidad Complutense de Madrid (UCM), promoción 1992–93</li>
+          <li>Tesina de Licenciatura en el Departamento de Profilaxis, Odontopediatría y Ortodoncia (UCM)</li>
+          <li>Formación en Ortodoncia bajo la dirección del Dr. D. José Alijarde Quimera</li>
+          <li>Profesor de la Universidad Alfonso X El Sabio (UAX) — cursos 2001–02 y 2002–03</li>
+          <li>Experto Universitario en Odontología Legal y Forense por la UAX</li>
+          <li>Alto nivel de inglés y francés — estancias en Francia, Inglaterra y EE.UU.</li>
+          <li>Práctica de Ortodoncia en centros privados desde 1994</li>
+        </ul>
+      </div>
+    </div>
+
+      <div class="doctor-card fade-in" id="odontopediatra">
+      <div class="doctor-photo-wrap">
+        <img src="img/equipo_lara.jpg" alt="Dra. Lara Magdaleno Huertas" class="doctor-photo photo-lara" loading="lazy">
+      </div>
+      <div class="doctor-info">
+        <span class="doctor-role">Especialista en Odontopediatría</span>
+        <h3 class="doctor-name">Dra. Lara Magdaleno Huertas</h3>
+        <p class="doctor-colegiado">Licenciada en Odontología — UCM, 2001</p>
+        <ul class="doctor-bio">
+          <li>Licenciada en Odontología por la Universidad Complutense de Madrid (UCM), 2001</li>
+          <li>Máster en Odontopediatría — Hospital San Rafael, Madrid, 2002. Miembro de la SEOP</li>
+          <li>Postgrado en Ortodoncia — Fundación Gnathos, Madrid, 2007</li>
+          <li>Postgrado en Ortopedia Funcional, Madrid, 2009</li>
+          <li>Experta Universitaria en Psicología del Coaching — Coach profesional (UNED, 2013)</li>
+        </ul>
+      </div>
+    </div>
+
+      <div class="doctor-card fade-in" id="endodoncista">
+      <div class="doctor-photo-wrap">
+        <div class="doctor-photo-placeholder">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="40" cy="28" r="18"/>
+            <path d="M10 72C10 56 24 44 40 44C56 44 70 56 70 72"/>
+          </svg>
+        </div>
+      </div>
+      <div class="doctor-info">
+        <span class="doctor-role">Especialista en Endodoncia</span>
+        <h3 class="doctor-name">Dra. Marta Real Mourelle</h3>
+        <p class="doctor-colegiado">Especialista en Endodoncia</p>
+        <ul class="doctor-bio">
+          <li>Especialista en tratamientos de conductos y patología pulpar</li>
+          <li>Formación avanzada en endodoncia con instrumentación rotatoria y localizadores de ápice</li>
+          <li>Experiencia en casos de alta complejidad: retratamientos y cirugía apical</li>
+        </ul>
+      </div>
+    </div>
+
+      <div class="doctor-card fade-in" id="odontologia-general">
+      <div class="doctor-photo-wrap">
+        <img src="img/equipo_oscar.jpg" alt="Óscar Iglesias Velázquez" class="doctor-photo photo-oscar" loading="lazy">
+      </div>
+      <div class="doctor-info">
+        <span class="doctor-role">Odontología General · Medicina Oral · Cirugía Bucal</span>
+        <h3 class="doctor-name">Óscar Iglesias Velázquez</h3>
+        <p class="doctor-colegiado">Grado en Odontología — UCM</p>
+        <ul class="doctor-bio">
+          <li>Grado en Odontología por la Universidad Complutense de Madrid (UCM)</li>
+          <li>Título Propio de Especialista en Medicina Oral por la UCM</li>
+          <li>Título Propio de Cirugía Bucal e Implantología por la UCM (en curso)</li>
+          <li>Doctorado en Ciencias Odontológicas por la UCM (en curso)</li>
+          <li>Profesor del Título Propio de Especialista en Medicina Oral (UCM)</li>
+          <li>Profesor colaborador en docencia práctica en Cirugía Bucal I e Implantología</li>
+          <li>Numerosas publicaciones científicas en revistas de impacto nacionales e internacionales, además de asistencia a cursos y congresos</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+
+    <div class="team-subhead fade-in" id="higienista">
+      <h3>Higienista y personal auxiliar</h3>
+      <p>El equipo de apoyo que hace posible la atención diaria de nuestros pacientes con profesionalidad y calidez.</p>
+    </div>
+    <div class="staff-grid">
+      <!-- María Puig -->
+      <div class="staff-card fade-in">
+        <img src="img/equipo_maria.jpg" alt="María Puig Martínez" class="staff-avatar" loading="lazy">
+        <span class="staff-role-badge">Higienista y Administración</span>
+        <h3 class="staff-name">María Puig Martínez</h3>
+        <ul class="staff-bio">
+          <li>Licenciada por la Universidad Autónoma de Madrid (UAM)</li>
+          <li>Técnico Superior en Higiene Bucodental</li>
+        </ul>
+      </div>
+
+      <!-- Cristina López -->
+      <div class="staff-card fade-in">
+        <img src="img/equipo_cristina.jpg" alt="Cristina López Peláez" class="staff-avatar" loading="lazy">
+        <span class="staff-role-badge">Auxiliar Clínica</span>
+        <h3 class="staff-name">Cristina López Peláez</h3>
+        <ul class="staff-bio">
+          <li>Técnico Auxiliar de Clínica por el Instituto Ciudad de Jaén (Madrid)</li>
+        </ul>
+      </div>
+
+      <!-- Alicia Murcia -->
+      <div class="staff-card fade-in">
+        <img src="img/equipo_alicia.jpg" alt="Alicia Murcia Carrasco" class="staff-avatar" loading="lazy">
+        <span class="staff-role-badge">Auxiliar Clínica</span>
+        <h3 class="staff-name">Alicia Murcia Carrasco</h3>
+        <ul class="staff-bio">
+          <li>Técnico Auxiliar de Clínica por EFA Valdemilanos (Madrid)</li>
+          <li>Técnico Superior en Imagen para el Diagnóstico — Centro FP Arduán (Sevilla)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LA CALIDAD ESTÁ EN LOS DETALLES ── -->
+<section class="detalles-section" aria-labelledby="detalles-title">
+  <div class="container">
+    <div class="detalles-inner">
+      <div class="fade-in">
+        <span class="label-tag">Nuestro compromiso</span>
+        <h2 id="detalles-title">La calidad del servicio está en los detalles</h2>
+        <p>Queremos simplificar su estancia en la clínica. Algunos ejemplos:</p>
+      </div>
+      <div class="detalles-list fade-in">
+        <div class="detalle-item"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Recordatorio de citas por correo electrónico o SMS</div>
+        <div class="detalle-item"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3C9 3 7 5 7 8c0 4 2 6 2 10 0 1.5 1 3 3 3s3-1.500 3-3c0-4 2-6 2-10 0-3-2-5-5-5z"/></svg>Clase gratuita de higiene bucal para niños</div>
+        <div class="detalle-item"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg>Aceptamos pago con tarjeta</div>
+      </div>
+    </div>
+    <p class="detalles-contacto fade-in">¿Tiene preguntas acerca de nuestros servicios? No dude en llamar al tlf: <a href="tel:+34918475574">91 847 55 74</a></p>
+  </div>
+</section>
+</div>
+
 <!-- ── SERVICIOS ── -->
 <section id="servicios" class="section" aria-labelledby="servicios-title">
   <div class="container">
@@ -227,6 +508,7 @@
         </div>
         <h3>Ortodoncia</h3>
         <p>Brackets metálicos, brackets estéticos y alineadores transparentes (Invisalign). Diseñamos el tratamiento más adecuado para tu caso.</p>
+        <a class="service-link" href="trat-ortodoncia.html?from=servicios" data-trat>Ver tratamiento →</a>
       </article>
       <article class="service-card fade-in">
         <div class="service-icon">
@@ -234,6 +516,7 @@
         </div>
         <h3>Implantes Dentales</h3>
         <p>Recupera la función y estética de tus dientes perdidos con implantes de titanio de alta calidad. Resultados naturales y duraderos.</p>
+        <a class="service-link" href="trat-cirugia-implantes.html?from=servicios" data-trat>Ver tratamiento →</a>
       </article>
       <article class="service-card fade-in">
         <div class="service-icon">
@@ -241,6 +524,7 @@
         </div>
         <h3>Odontología Estética</h3>
         <p>Carillas de porcelana, blanqueamiento dental profesional y diseño de sonrisa. Tu sonrisa perfecta está más cerca de lo que crees.</p>
+        <a class="service-link" href="trat-estetica-dental.html?from=servicios" data-trat>Ver tratamiento →</a>
       </article>
       <article class="service-card fade-in">
         <div class="service-icon">
@@ -248,6 +532,7 @@
         </div>
         <h3>Endodoncia</h3>
         <p>Tratamiento de conductos con las últimas técnicas para salvar dientes dañados o infectados, eliminando el dolor de forma definitiva.</p>
+        <a class="service-link" href="trat-endodoncia.html?from=servicios" data-trat>Ver tratamiento →</a>
       </article>
       <article class="service-card fade-in">
         <div class="service-icon">
@@ -255,6 +540,7 @@
         </div>
         <h3>Periodoncia</h3>
         <p>Diagnóstico y tratamiento de la enfermedad periodontal (piorrea). Protegemos tus encías para mantener una boca sana a largo plazo.</p>
+        <a class="service-link" href="trat-periodoncia.html?from=servicios" data-trat>Ver tratamiento →</a>
       </article>
       <article class="service-card fade-in">
         <div class="service-icon">
@@ -262,53 +548,92 @@
         </div>
         <h3>Odontopediatría</h3>
         <p>Cuidado dental especializado para los más pequeños desde los primeros dientes. Un primer paso positivo hacia hábitos saludables de por vida.</p>
+        <a class="service-link" href="trat-odontopediatria.html?from=servicios" data-trat>Ver tratamiento →</a>
+      </article>
+      <article class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 4L26 8V15C26 21 22 26 16 28C10 26 6 21 6 15V8L16 4Z"/><path d="M11.5 16l3 3 6-6"/></svg>
+        </div>
+        <h3>Profilaxis Dental</h3>
+        <p>Limpieza dental profesional para prevenir caries, enfermedad periodontal y halitosis. La base de una boca sana.</p>
+        <a class="service-link" href="trat-profilaxis.html?from=servicios" data-trat>Ver tratamiento →</a>
+      </article>
+      <article class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 13C7 8.5 10.5 6 14 6C15 6 15.7 6.2 16 6.5C16.3 6.2 17 6 18 6C21.5 6 25 8.5 25 13C25 16 23.5 18 22.5 21L21 26H19L18 21H14L13 26H11L9.5 21C8.5 18 7 16 7 13Z"/><path d="M12 12h8"/></svg>
+        </div>
+        <h3>Prótesis Dental</h3>
+        <p>Prótesis fija sobre implantes, removible o sobre dientes naturales para recuperar tu masticación, tu estética y tu confianza.</p>
+        <a class="service-link" href="trat-protesis.html?from=servicios" data-trat>Ver tratamiento →</a>
+      </article>
+      <article class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="14" cy="14" r="8"/><path d="M20 20l7 7"/><path d="M14 10v8M10 14h8"/></svg>
+        </div>
+        <h3>Medicina Bucal</h3>
+        <p>Diagnóstico precoz del cáncer oral y tratamiento de las enfermedades de la mucosa y los tejidos de la boca.</p>
+        <a class="service-link" href="trat-medicina-bucal.html?from=servicios" data-trat>Ver tratamiento →</a>
+      </article>
+      <article class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 12C6 8.7 8.7 6 12 6H20C23.3 6 26 8.7 26 12V14C26 16 24.5 17 23 17H9C7.5 17 6 16 6 14V12Z"/><path d="M10 17V22M22 17V22M13 26h6"/></svg>
+        </div>
+        <h3>Patología Articular (ATM)</h3>
+        <p>Tratamiento del bruxismo y de la disfunción de la articulación témporo-mandibular con férulas de relajación.</p>
+        <a class="service-link" href="trat-patologia-articular.html?from=servicios" data-trat>Ver tratamiento →</a>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ── POR QUÉ ELEGIRNOS ── -->
-<section id="nosotros" class="section section-alt" aria-labelledby="nosotros-title">
+
+<!-- ── FINANCIACIÓN ── -->
+<div id="financiacion">
+<div class="fin-intro">
+  <div class="container fade-in">
+    <span class="label-tag">Financiación</span>
+    <h2>Financia todos tus tratamientos con las <span>mejores condiciones</span></h2>
+    <p>En Guadalix Clínica Dental queremos ponértelo fácil: financiamos todos tus tratamientos dentales.</p>
+  </div>
+</div>
+<section class="fin-highlight">
   <div class="container">
-    <div class="why-inner">
-      <div class="fade-in">
-        <span class="label-tag">Por Qué Elegirnos</span>
-        <h2 class="section-title" id="nosotros-title">Más de 15 años cuidando sonrisas en Guadalix</h2>
-        <p class="section-sub">Somos una clínica de referencia en la Sierra Norte de Madrid, comprometida con la excelencia clínica y el trato humano.</p>
-        <ul class="why-list">
-          <li class="why-item">
-            <div class="why-check"><svg viewBox="0 0 14 14" fill="none" stroke="white" stroke-width="2"><polyline points="2 7 6 11 12 3"/></svg></div>
-            <div><strong>Tecnología de última generación</strong><p>Radiografía digital, escáner intraoral 3D y blanqueamiento LED en clínica.</p></div>
-          </li>
-          <li class="why-item">
-            <div class="why-check"><svg viewBox="0 0 14 14" fill="none" stroke="white" stroke-width="2"><polyline points="2 7 6 11 12 3"/></svg></div>
-            <div><strong>Equipo especializado y empático</strong><p>Cada profesional cuenta con formación continua y trato paciente y cercano.</p></div>
-          </li>
-          <li class="why-item">
-            <div class="why-check"><svg viewBox="0 0 14 14" fill="none" stroke="white" stroke-width="2"><polyline points="2 7 6 11 12 3"/></svg></div>
-            <div><strong>Presupuesto sin compromiso</strong><p>Primera visita de diagnóstico gratuita y financiación flexible sin intereses.</p></div>
-          </li>
-          <li class="why-item">
-            <div class="why-check"><svg viewBox="0 0 14 14" fill="none" stroke="white" stroke-width="2"><polyline points="2 7 6 11 12 3"/></svg></div>
-            <div><strong>Clínica familiar de proximidad</strong><p>Llevamos tratando a las familias de Guadalix y la comarca durante generaciones.</p></div>
-          </li>
-          <li class="why-item">
-            <div class="why-check"><svg viewBox="0 0 14 14" fill="none" stroke="white" stroke-width="2"><polyline points="2 7 6 11 12 3"/></svg></div>
-            <div><strong>Estrictos protocolos de esterilización</strong><p>Cumplimos con todos los requisitos sanitarios del Ministerio de Sanidad.</p></div>
-          </li>
-        </ul>
-      </div>
-      <div class="fade-in">
-        <img
-          src="img/clinica_recepcion1.jpg"
-          alt="Recepción y sala de espera de Clínica Dental Guadalix"
-          class="why-img"
-          loading="lazy"
-        >
+    <div class="fin-card fade-in">
+      <div class="fin-big"><strong>24</strong><span>meses</span></div>
+      <div>
+        <h2>Todos tus tratamientos dentales, hasta en 24 meses</h2>
+        <p>Queremos que la salud de tu boca no dependa de pagar todo de una vez. Estudiamos tu caso particular y te ofrecemos la financiación que mejor se adapte a tus necesidades.</p>
       </div>
     </div>
   </div>
 </section>
+
+<section class="fin-steps">
+  <div class="container">
+    <div class="fin-steps-title fade-in">
+      <span class="label-tag">Cómo funciona</span>
+      <h2>Tres pasos para empezar</h2>
+    </div>
+    <div class="fin-steps-grid">
+      <div class="fin-step fade-in">
+        <div class="fin-step-num">1</div>
+        <h3>Coge una cita</h3>
+        <p>Pide cita por calendario, por WhatsApp o por voz, como te resulte más cómodo.</p>
+      </div>
+      <div class="fin-step fade-in">
+        <div class="fin-step-num">2</div>
+        <h3>Revisión y presupuesto</h3>
+        <p>Te realizamos una revisión y te preparamos un presupuesto de los tratamientos que necesites.</p>
+      </div>
+      <div class="fin-step fade-in">
+        <div class="fin-step-num">3</div>
+        <h3>Financiación a tu medida</h3>
+        <p>Estudiamos tu caso particular y te ofrecemos la financiación que mejor se adapte a tus necesidades.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
 
 <!-- ── HORARIOS ── -->
 <section id="horarios" class="section" aria-labelledby="horarios-title">
@@ -575,8 +900,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-logo">
-          <svg width="24" height="24" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3C16 3 10 7 8 13C6 19 10 23 13 23C14.5 23 15.5 22 16 21C16.5 22 17.5 23 19 23C22 23 26 19 24 13C22 7 16 3 16 3Z"/><path d="M16 21V29"/></svg>
-          Clínica Dental <span>Guadalix</span>
+          <img src="img/logo-blanco.svg" alt="Clínica Dental Guadalix" class="footer-logo-img" width="285" height="38">
         </div>
         <p>Odontología integral y personalizada en Guadalix de la Sierra. Más de 15 años cuidando las sonrisas de las familias de la Sierra Norte de Madrid.</p>
       </div>
@@ -594,7 +918,7 @@
       <div class="footer-col">
         <h4>Clínica</h4>
         <ul>
-          <li><a href="#nosotros">Quiénes somos</a></li>
+          <li><a href="#quienes-somos">Quiénes somos</a></li>
           <li><a href="#horarios">Horarios</a></li>
           <li><a href="#testimonios">Testimonios</a></li>
           <li><a href="#contacto">Contacto</a></li>
@@ -605,7 +929,7 @@
         <ul>
           <li><a href="tel:+34918475574">📞 91 847 55 74</a></li>
           <li><a href="mailto:guadalixclinicadental@gmail.com">✉️ guadalixclinicadental@gmail.com</a></li>
-          <li><a href="https://wa.me/34621354648" target="_blank" rel="noopener">💬 WhatsApp</a></li>
+          <li><a href="https://wa.me/34621354648" target="_blank" rel="noopener">💬 Cita por WhatsApp</a></li><li><a href="tel:+34919934125">🎙️ Cita por Voz</a></li>
           <li><a href="#contacto">📍 Guadalix de la Sierra</a></li>
         </ul>
       </div>
@@ -622,14 +946,16 @@
 </footer>
 
 <!-- ── WHATSAPP FLOAT ── -->
-<a
-  href="https://wa.me/34621354648?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20cita%20en%20la%20cl%C3%ADnica."
-  class="whatsapp-float"
-  target="_blank" rel="noopener noreferrer"
-  aria-label="Contactar por WhatsApp"
->
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
+<div class="cita-float" aria-label="Pedir cita">
+  <a href="https://wa.me/34621354648?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20cita%20en%20la%20cl%C3%ADnica." class="cita-wa" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Cita por WhatsApp
+  </a>
+  <a href="tel:+34919934125" class="cita-voz">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Cita por Voz
+  </a>
+</div>
 
 <script src="script.js"></script>
 
@@ -644,5 +970,13 @@
 })();
 </script>
 
+
+<!-- Visor de tratamientos -->
+<div id="trat-modal" class="trat-modal" hidden role="dialog" aria-modal="true" aria-label="Información del tratamiento">
+  <div class="trat-modal-box">
+    <button type="button" class="trat-modal-close" id="trat-close" aria-label="Cerrar">&times;</button>
+    <iframe id="trat-frame" title="Tratamiento"></iframe>
+  </div>
+</div>
 </body>
 </html>

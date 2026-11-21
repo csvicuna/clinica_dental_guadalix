@@ -134,3 +134,67 @@ form.addEventListener('submit', async (e) => {
     submitBtn.textContent = 'Enviar solicitud de cita →';
   }
 });
+
+// ── Visor interno de tratamientos ──
+(function () {
+  const modal = document.getElementById('trat-modal');
+  const frame = document.getElementById('trat-frame');
+  if (!modal || !frame) return;
+  let open = false;
+  function show(href) {
+    frame.src = href;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    open = true;
+    history.pushState({ trat: href }, '', location.href);
+  }
+  function hide() {
+    if (!open) return;
+    modal.hidden = true;
+    frame.src = 'about:blank';
+    document.body.style.overflow = '';
+    open = false;
+  }
+  function close() { if (open) history.back(); }
+  document.querySelectorAll('.service-card').forEach(card => {
+    const a = card.querySelector('a[data-trat]');
+    if (!a) return;
+    card.addEventListener('click', e => {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
+      e.preventDefault();
+      show(a.getAttribute('href'));
+    });
+  });
+  window.addEventListener('popstate', hide);
+  document.getElementById('trat-close').addEventListener('click', close);
+  modal.addEventListener('click', e => { if (e.target === modal) close(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  window.addEventListener('message', e => {
+    if (!e.data || !e.data.gx) return;
+    const h = e.data.href;
+    if (!h) { close(); return; }
+    // enlaces internos desde el visor: cerrar y llevar a la sección/página
+    if (/^index\.html#/.test(h)) {
+      history.back();
+      setTimeout(() => { location.hash = h.split('#')[1]; }, 50);
+    } else {
+      hide(); location.href = h;
+    }
+  });
+})();
+
+// ── Enlace activo según la sección visible
+(function () {
+  const ids = ['quienes-somos', 'servicios', 'financiacion', 'horarios', 'testimonios', 'contacto'];
+  const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+  const links = document.querySelectorAll('.nav-link[href^="#"]');
+  function update() {
+    let current = '';
+    sections.forEach(sec => { if (sec.getBoundingClientRect().top <= 140) current = sec.id; });
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) current = 'contacto';
+    links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
